@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.websarva.wings.android.kaigonote">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Kaigonote">
+        <activity android:name=".MainActivity9_6"></activity>
+        <activity android:name=".MainActivity9_5" />
+        <activity android:name=".MainActivity9_4" />
+        <activity android:name=".MainActivity3_4" />
+        <activity android:name=".MainActivity9_3" />
+        <activity android:name=".MainActivity9_2" />
+        <activity android:name=".MainActivity9_1" />
+        <activity android:name=".MainActivity7_2" />
+        <activity android:name=".MainActivity7_1" />
+        <activity android:name=".MainActivity6_3" />
+        <activity android:name=".MainActivity6_2" />
+        <activity android:name=".MainActivity6_1" />
+        <activity android:name=".MainActivity4_3" />
+        <activity android:name=".MainActivity4_2" />
+        <activity android:name=".MainActivity4_1" />
+        <activity android:name=".MainActivity3_3" />
+        <activity android:name=".MainActivity3_2" />
+        <activity android:name=".MainActivity3_1" />
+        <activity android:name=".MainActivity2_2" />
+        <activity android:name=".MainActivity10" />
+        <activity android:name=".MainActivity9" />
+        <activity android:name=".MainActivity8" />
+        <activity android:name=".MainActivity7" />
+        <activity android:name=".MainActivity6" />
+        <activity android:name=".MainActivity5" />
+        <activity android:name=".MainActivity4" />
+        <activity android:name=".MainActivity3" />
+        <activity android:name=".MainActivity2_1" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
