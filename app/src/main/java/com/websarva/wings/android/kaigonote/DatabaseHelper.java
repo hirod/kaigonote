@@ -14,8 +14,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
+    @Override
+    public void onOpen(SQLiteDatabase db){
+        super.onOpen(db);
+    }
+
     public void onCreate(SQLiteDatabase db) {
-       String cmd = "create table Kaigomemo('日付' DATE,'番号' INTEGER,'名前' CHAR,'排泄' CHAR,'入浴' CHAR,'食事・飲水' INTEGER,'配薬' CHAR,'口腔' CHAR,'記録'VARCHER,'アクシデント' VARCHER,'記録一覧'VARCHER)";
+       String cmd = "create table Kaigomemo" + "('日付' DATE,'番号' INTEGER,'名前' CHAR,'排泄' CHAR,'入浴' CHAR,'食事・飲水' INTEGER,'配薬' CHAR,'口腔' CHAR,'記録'VARCHER,'アクシデント' VARCHER,'記録一覧'VARCHER)";
        db.execSQL(cmd);
 
     }

@@ -18,7 +18,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
         public void onClick (View v){
             if (v.getId() == R.id.bt_click10) {
-                Intent intent10 = new Intent(this, MainActivity2_1.class);//排尿メニュー
+                Intent intent10 = new Intent(this, HaisetuActivity.class);//排尿メニュー
                 startActivity(intent10);
             } else if (v.getId() == R.id.bt_click11) {
                 Intent intent11 = new Intent(this, MainActivity2_2.class);//排便メニュー
