@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2_1">
+    tools:context=".HaisetuActivity">
 
     <ListView
         android:id="@+id/kaigo"
@@ -60,6 +60,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:minHeight="48dp"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintHorizontal_bias="1.0"
         app2:layout_constraintStart_toStartOf="parent"
@@ -75,10 +76,12 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:minHeight="48dp"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintHorizontal_bias="1.0"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/tv_name3" />
+        app2:layout_constraintTop_toBottomOf="@+id/tv_name3"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/tv_name1"
