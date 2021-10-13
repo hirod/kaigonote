@@ -6,16 +6,21 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.websarva.wings.android.kaigonote.databinding.ActivityMain4Binding;
+
 public class SyokujiActivity3 extends AppCompatActivity implements View.OnClickListener {
+    private ActivityMain4Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-        findViewById(R.id.bt_click12).setOnClickListener(this);//朝食ボタンタップされたときの処理
-        findViewById(R.id.bt_click13).setOnClickListener(this);//昼食ボタンタップされたときの処理
-        findViewById(R.id.bt_click14).setOnClickListener(this);//夕食ボタンタップされたときの処理
-        findViewById(R.id.bt_click15).setOnClickListener(this);//間食ボタンタップされたときの処理
+        binding = ActivityMain4Binding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
+        binding.btClick12.setOnClickListener(this);//朝食ボタンタップされたときの処理
+        binding.btClick13.setOnClickListener(this);//昼食ボタンタップされたときの処理
+        binding.btClick14.setOnClickListener(this);//夕食ボタンタップされたときの処理
+        binding.btClick15.setOnClickListener(this);//間食ボタンタップされたときの処理
 
     }
 

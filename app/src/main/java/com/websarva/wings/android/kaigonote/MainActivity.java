@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.websarva.wings.android.kaigonote.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
+
     private ActivityMainBinding binding;
 
     @Override

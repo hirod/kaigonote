@@ -6,14 +6,19 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.websarva.wings.android.kaigonote.databinding.ActivityMain2Binding;
+
 public class HaisetuActivity2 extends AppCompatActivity implements View.OnClickListener {
+    private ActivityMain2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);//画面切り替え
-        findViewById(R.id.bt_click10).setOnClickListener(this);//排尿ボタンがタップされたときの処理
-        findViewById(R.id.bt_click11).setOnClickListener(this);//排便ボタンがタップされたときの処理
+        binding = ActivityMain2Binding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);//画面切り替え
+        binding.btClick10.setOnClickListener(this);//排尿ボタンがタップされたときの処理
+        binding.btClick11.setOnClickListener(this);//排便ボタンがタップされたときの処理
     }
 
     public void onClick(View v) {

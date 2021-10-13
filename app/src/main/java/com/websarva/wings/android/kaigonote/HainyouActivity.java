@@ -10,18 +10,18 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.websarva.wings.android.kaigonote.databinding.ActivityHaisetuBinding;
+import com.websarva.wings.android.kaigonote.databinding.ActivityMain21Binding;
 
 
 public class HainyouActivity extends AppCompatActivity {
     private int _kaigoId = -1;
     private String _kaigoName = "";
-    private ActivityHaisetuBinding binding;
+    private ActivityMain21Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityHaisetuBinding.inflate(getLayoutInflater());
+        binding = ActivityMain21Binding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
         binding.kaigo.setOnItemClickListener(new ListItemClickListner());
