@@ -7,16 +7,16 @@ import android.view.View.OnClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.websarva.wings.android.kaigonote.databinding.ActivityMainBinding;
+import com.websarva.wings.android.kaigonote.databinding.MenuBinding;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
-    private ActivityMainBinding binding;
+    private MenuBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = MenuBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
 
@@ -36,31 +36,31 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.bt_click) {
-            Intent intent = new Intent(this, HaisetuActivity2.class);//排泄メニュー
+            Intent intent = new Intent(this, HaisetuActivity.class);//排泄メニュー
             startActivity(intent);
         } else if (v.getId() == R.id.bt_click2) {
-            Intent intent2 = new Intent(this, SyokujiActivity3.class);//食事メニュー
+            Intent intent2 = new Intent(this, SyokujiActivity.class);//食事メニュー
             startActivity(intent2);
         } else if (v.getId() == R.id.bt_click3) {
-            Intent intent3 = new Intent(this, KoukuActivity4.class);//口腔メニュー
+            Intent intent3 = new Intent(this, KoukuActivity.class);//口腔メニュー
             startActivity(intent3);
         } else if (v.getId() == R.id.bt_click4) {
-            Intent intent4 = new Intent(this, NyuyokuActivity5.class);//入浴メニュー
+            Intent intent4 = new Intent(this, NyuyokuActivity.class);//入浴メニュー
             startActivity(intent4);
         } else if (v.getId() == R.id.bt_click5) {
-            Intent intent5 = new Intent(this, KirokuActivity6.class);//記録メニュー
+            Intent intent5 = new Intent(this, KirokuActivity.class);//記録メニュー
             startActivity(intent5);
         } else if (v.getId() == R.id.bt_click6) {
-            Intent intent6 = new Intent(this, AcsidentoActivity7.class);//アクシデントメニュー
+            Intent intent6 = new Intent(this, AcsidentoActivity.class);//アクシデントメニュー
             startActivity(intent6);
         } else if (v.getId() == R.id.bt_click7) {
             Intent intent7 = new Intent(this, SyotiActivity8.class);//処置メニュー
             startActivity(intent7);
         } else if (v.getId() == R.id.bt_click8) {
-            Intent intent8 = new Intent(this, HaiyakuActivity9.class);//配薬メニュー
+            Intent intent8 = new Intent(this, HaiyakuActivity.class);//配薬メニュー
             startActivity(intent8);
         } else if (v.getId() == R.id.bt_click9) {
-            Intent intent9 = new Intent(this, KirokuitirannActivity10.class);//記録一覧メニュー
+            Intent intent9 = new Intent(this, KirokuitirannActivity.class);//記録一覧メニュー
             startActivity(intent9);
         }
     }
