@@ -19,15 +19,15 @@ public class AcsidentoActivity extends AppCompatActivity implements OnClickListe
         binding = AcsidentoBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        binding.btClick22.setOnClickListener(this);//ヒヤリハットボタンがタップされたときの処理
-        binding.btClick23.setOnClickListener(this);//事故報告ボタンがタップされたときの処理
+        binding.hiyariClick.setOnClickListener(this);//ヒヤリハットボタンがタップされたときの処理
+        binding.zikoClick.setOnClickListener(this);//事故報告ボタンがタップされたときの処理
     }
 
     public void onClick(View v) {
-        if (v.getId() == R.id.bt_click22) {
+        if (v.getId() == R.id.hiyari_click) {
             Intent intent22 = new Intent(this, HiyariActivity.class);//ヒヤリハット
             startActivity(intent22);
-        } else if (v.getId() == R.id.bt_click23) {
+        } else if (v.getId() == R.id.ziko_click) {
             Intent intent23 = new Intent(this, ZikoActivity.class);//事故報告
             startActivity(intent23);
         }

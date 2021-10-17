@@ -17,15 +17,15 @@ public class HaisetuActivity extends AppCompatActivity implements View.OnClickLi
         binding = HaisetuBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);//画面切り替え
-        binding.btClick10.setOnClickListener(this);//排尿ボタンがタップされたときの処理
-        binding.btClick11.setOnClickListener(this);//排便ボタンがタップされたときの処理
+        binding.hainyouClick.setOnClickListener(this);//排尿ボタンがタップされたときの処理
+        binding.haibennClick.setOnClickListener(this);//排便ボタンがタップされたときの処理
     }
 
     public void onClick(View v) {
-        if (v.getId() == R.id.bt_click10) {
+        if (v.getId() == R.id.hainyou_click) {
             Intent intent10 = new Intent(this, HainyouActivity.class);//排尿メニュー
             startActivity(intent10);
-        } else if (v.getId() == R.id.bt_click11) {
+        } else if (v.getId() == R.id.haibenn_click) {
             Intent intent11 = new Intent(this, HaibennActivity.class);//排便メニュー
             startActivity(intent11);
         }

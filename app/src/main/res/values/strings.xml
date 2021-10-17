@@ -1,37 +1,38 @@
 <resources>
     <string name="app_name">介護ノート</string>
-    <string name="bt_click">排泄</string>
-    <string name="bt_click2">食事・飲水</string>
-    <string name="bt_click3">口腔</string>
-    <string name="bt_click4">入浴</string>
-    <string name="bt_click5">記録</string>
-    <string name="bt_click6">アクシデント</string>
-    <string name="bt_click7">処置</string>
-    <string name="bt_click8">配薬</string>
-    <string name="bt_click9">記録一覧</string>
-    <string name="bt_click10">排尿</string>
-    <string name="bt_click11">排便</string>
-    <string name="bt_click12">朝食</string>
-    <string name="bt_click13">昼食</string>
-    <string name="bt_click14">夕食</string>
-    <string name="bt_click15">間食</string>
-    <string name="bt_click16">朝食 口腔</string>
-    <string name="bt_click17">昼食 口腔</string>
-    <string name="bt_click18">夕食 口腔</string>
-    <string name="bt_click19">日常記録</string>
-    <string name="bt_click20">入浴記録</string>
-    <string name="bt_click21">申し送り</string>
-    <string name="bt_click22">ヒヤリハット</string>
-    <string name="bt_click23">事故報告</string>
-    <string name="bt_click24">朝食後薬</string>
-    <string name="bt_click25">昼食後薬</string>
-    <string name="bt_click26">夕食後薬</string>
-    <string name="bt_click27">起床時薬</string>
-    <string name="bt_click28">就寝薬</string>
-    <string name="bt_click29">頓服</string>
+    <string name="haisetu_click">排泄</string>
+    <string name="syokujinsui_click">食事・飲水</string>
+    <string name="kouku_click">口腔</string>
+    <string name="nyuyoku_click">入浴</string>
+    <string name="kiroku_click">記録</string>
+    <string name="acsidento_click">アクシデント</string>
+    <string name="syoti_click">処置</string>
+    <string name="haiyaku_click">配薬</string>
+    <string name="kirokuitirann_click">記録一覧</string>
+    <string name="hainyou_click">排尿</string>
+    <string name="haibenn_click">排便</string>
+    <string name="tyousyoku_click">朝食</string>
+    <string name="tyusyoku_click">昼食</string>
+    <string name="yuusyoku_click">夕食</string>
+    <string name="kansyoku_click">間食</string>
+    <string name="asakouku_click">朝食 口腔</string>
+    <string name="hirukouku_click">昼食 口腔</string>
+    <string name="yorukouku_click">夕食 口腔</string>
+    <string name="nitizyoukiroku_click">日常記録</string>
+    <string name="nyuyokukiroku_click">入浴記録</string>
+    <string name="mosiokuri_click">申し送り</string>
+    <string name="hiyari_click">ヒヤリハット</string>
+    <string name="ziko_click">事故報告</string>
+    <string name="tyosyokugoyaku_click">朝食後薬</string>
+    <string name="tyusyokugoyaku_click">昼食後薬</string>
+    <string name="yusyokugoyaku_click">夕食後薬</string>
+    <string name="kisyouziyaku_click">起床時薬</string>
+    <string name="syusinngoyaku_click">就寝薬</string>
+    <string name="tonpuku_click">頓服</string>
     <string name="menu_1">排尿メニュー</string>
     <string-array name="kaigo">
-   　　  <item>排尿なし  </item>
+        　　
+        <item>排尿なし  </item>
         <item>排尿あり　少量</item>
         <item>排尿あり　普通量</item>
         <item>排尿あり　多量</item>
@@ -40,8 +41,6 @@
     <string name="tv_name2">名前</string>
     <string name="tv_name3">備考</string>
     <string name="tv_name">未選択</string>
-
-
 
 
 </resources>

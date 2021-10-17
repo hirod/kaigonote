@@ -7,18 +7,18 @@
     tools:context=".SyokujiActivity">
 
     <Button
-        android:id="@+id/bt_click12"
+        android:id="@+id/tyousyoku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="200dp"
-        android:text="@string/bt_click12"
+        android:text="@string/tyousyoku_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click13"
+        android:id="@+id/tyusyoku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="28dp"
@@ -26,24 +26,24 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:text="@string/bt_click13"
-        app:layout_constraintEnd_toStartOf="@+id/bt_click14"
-        app:layout_constraintStart_toEndOf="@+id/bt_click12"
+        android:text="@string/tyusyoku_click"
+        app:layout_constraintEnd_toStartOf="@+id/yuusyoku_click"
+        app:layout_constraintStart_toEndOf="@+id/tyousyoku_click"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click14"
+        android:id="@+id/yuusyoku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/bt_click14"
+        android:text="@string/yuusyoku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click15"
+        android:id="@+id/kansyoku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="144dp"
@@ -51,7 +51,7 @@
         android:layout_marginTop="344dp"
         android:layout_marginEnd="144dp"
         android:layout_marginRight="144dp"
-        android:text="@string/bt_click15"
+        android:text="@string/kansyoku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

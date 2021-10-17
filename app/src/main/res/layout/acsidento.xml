@@ -7,24 +7,24 @@
     tools:context=".AcsidentoActivity">
 
     <Button
-        android:id="@+id/bt_click22"
+        android:id="@+id/hiyari_click"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="150dp"
-        android:text="@string/bt_click22"
+        android:text="@string/hiyari_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click23"
+        android:id="@+id/ziko_click"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:text="@string/bt_click23"
+        android:text="@string/ziko_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -8,24 +8,24 @@
 
 
     <Button
-        android:id="@+id/bt_click10"
+        android:id="@+id/hainyou_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginTop="252dp"
-        android:text="@string/bt_click10"
+        android:text="@string/hainyou_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click11"
+        android:id="@+id/haibenn_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="252dp"
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
-        android:text="@string/bt_click11"
+        android:text="@string/haibenn_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

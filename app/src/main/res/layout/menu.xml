@@ -9,101 +9,101 @@
 
 
     <Button
-        android:id="@+id/bt_click"
+        android:id="@+id/haisetu_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="16dp"
-        android:text="@string/bt_click"
+        android:text="@string/haisetu_click"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click9" />
+        app:layout_constraintTop_toBottomOf="@+id/kirokuitirann_click" />
 
     <Button
-        android:id="@+id/bt_click2"
+        android:id="@+id/syokujinsui_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
-        android:text="@string/bt_click2"
+        android:text="@string/syokujinsui_click"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click4" />
+        app:layout_constraintTop_toBottomOf="@+id/nyuyoku_click" />
 
     <Button
-        android:id="@+id/bt_click3"
+        android:id="@+id/kouku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
-        android:text="@string/bt_click3"
+        android:text="@string/kouku_click"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click9" />
+        app:layout_constraintTop_toBottomOf="@+id/kirokuitirann_click" />
 
     <Button
-        android:id="@+id/bt_click5"
+        android:id="@+id/kiroku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
-        android:text="@string/bt_click5"
-        app:layout_constraintEnd_toStartOf="@+id/bt_click3"
+        android:text="@string/kiroku_click"
+        app:layout_constraintEnd_toStartOf="@+id/kouku_click"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click2" />
+        app:layout_constraintTop_toBottomOf="@+id/syokujinsui_click" />
 
     <Button
-        android:id="@+id/bt_click4"
+        android:id="@+id/nyuyoku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
-        android:text="@string/bt_click4"
+        android:text="@string/nyuyoku_click"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click" />
+        app:layout_constraintTop_toBottomOf="@+id/haisetu_click" />
 
     <Button
-        android:id="@+id/bt_click6"
+        android:id="@+id/acsidento_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
-        android:text="@string/bt_click6"
+        android:text="@string/acsidento_click"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click7" />
+        app:layout_constraintTop_toBottomOf="@+id/syoti_click" />
 
     <Button
-        android:id="@+id/bt_click7"
+        android:id="@+id/syoti_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
-        android:text="@string/bt_click7"
+        android:text="@string/syoti_click"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click3" />
+        app:layout_constraintTop_toBottomOf="@+id/kouku_click" />
 
     <Button
-        android:id="@+id/bt_click8"
+        android:id="@+id/haiyaku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
-        android:text="@string/bt_click8"
+        android:text="@string/haiyaku_click"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_click6" />
+        app:layout_constraintTop_toBottomOf="@+id/acsidento_click" />
 
     <Button
-        android:id="@+id/bt_click9"
+        android:id="@+id/kirokuitirann_click"
         android:layout_width="250dp"
         android:layout_height="63dp"
         android:layout_marginTop="24dp"
-        android:text="@string/bt_click9"
+        android:text="@string/kirokuitirann_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"

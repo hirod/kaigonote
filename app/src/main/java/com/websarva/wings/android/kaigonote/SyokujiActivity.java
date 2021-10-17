@@ -17,25 +17,25 @@ public class SyokujiActivity extends AppCompatActivity implements View.OnClickLi
         binding = SyokujiBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-        binding.btClick12.setOnClickListener(this);//朝食ボタンタップされたときの処理
-        binding.btClick13.setOnClickListener(this);//昼食ボタンタップされたときの処理
-        binding.btClick14.setOnClickListener(this);//夕食ボタンタップされたときの処理
-        binding.btClick15.setOnClickListener(this);//間食ボタンタップされたときの処理
+        binding.tyousyokuClick.setOnClickListener(this);//朝食ボタンタップされたときの処理
+        binding.tyusyokuClick.setOnClickListener(this);//昼食ボタンタップされたときの処理
+        binding.yuusyokuClick.setOnClickListener(this);//夕食ボタンタップされたときの処理
+        binding.kansyokuClick.setOnClickListener(this);//間食ボタンタップされたときの処理
 
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.bt_click12) {
+        if (v.getId() == R.id.tyousyoku_click) {
             Intent intent12 = new Intent(this, TyousyokuActivity.class);//朝食記録
             startActivity(intent12);
-        } else if (v.getId() == R.id.bt_click13) {
+        } else if (v.getId() == R.id.tyusyoku_click) {
             Intent intent13 = new Intent(this, TyusyokuActivity.class);//昼食記録
             startActivity(intent13);
-        } else if (v.getId() == R.id.bt_click14) {
+        } else if (v.getId() == R.id.yuusyoku_click) {
             Intent intent14 = new Intent(this, YuusyokuActivity.class);//夕食記録
             startActivity(intent14);
-        } else if (v.getId() == R.id.bt_click15) {
+        } else if (v.getId() == R.id.kansyoku_click) {
             Intent intent15 = new Intent(this, KansyokuActivity.class);//間食記録
             startActivity(intent15);
         }

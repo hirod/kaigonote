@@ -7,37 +7,37 @@
     tools:context=".KoukuActivity">
 
     <Button
-        android:id="@+id/bt_click16"
+        android:id="@+id/asakouku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="150dp"
-        android:text="@string/bt_click16"
-        app:layout_constraintEnd_toStartOf="@+id/bt_click18"
+        android:text="@string/asakouku_click"
+        app:layout_constraintEnd_toStartOf="@+id/yorukouku_click"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click17"
+        android:id="@+id/hirukouku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="150dp"
-        android:text="@string/bt_click17"
-        app:layout_constraintStart_toEndOf="@+id/bt_click16"
+        android:text="@string/hirukouku_click"
+        app:layout_constraintStart_toEndOf="@+id/asakouku_click"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_click18"
+        android:id="@+id/yorukouku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/bt_click18"
+        android:text="@string/yorukouku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
