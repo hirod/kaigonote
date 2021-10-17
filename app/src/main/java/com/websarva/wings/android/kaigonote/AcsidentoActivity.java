@@ -25,10 +25,10 @@ public class AcsidentoActivity extends AppCompatActivity implements OnClickListe
 
     public void onClick(View v) {
         if (v.getId() == R.id.bt_click22) {
-            Intent intent22 = new Intent(this, HiyariActivity7_1.class);//ヒヤリハット
+            Intent intent22 = new Intent(this, HiyariActivity.class);//ヒヤリハット
             startActivity(intent22);
         } else if (v.getId() == R.id.bt_click23) {
-            Intent intent23 = new Intent(this, ZikoActivity7_2.class);//事故報告
+            Intent intent23 = new Intent(this, ZikoActivity.class);//事故報告
             startActivity(intent23);
         }
     }

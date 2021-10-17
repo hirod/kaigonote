@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             Intent intent6 = new Intent(this, AcsidentoActivity.class);//アクシデントメニュー
             startActivity(intent6);
         } else if (v.getId() == R.id.bt_click7) {
-            Intent intent7 = new Intent(this, SyotiActivity8.class);//処置メニュー
+            Intent intent7 = new Intent(this, SyotiActivity.class);//処置メニュー
             startActivity(intent7);
         } else if (v.getId() == R.id.bt_click8) {
             Intent intent8 = new Intent(this, HaiyakuActivity.class);//配薬メニュー

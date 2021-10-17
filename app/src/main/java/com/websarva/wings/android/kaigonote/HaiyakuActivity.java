@@ -29,22 +29,22 @@ public class HaiyakuActivity extends AppCompatActivity implements OnClickListene
 
     public void onClick(View v) {
         if (v.getId() == R.id.bt_click24) {
-            Intent intent24 = new Intent(this, TyosyokugoyakuActivity9_1.class);//朝食後薬
+            Intent intent24 = new Intent(this, TyosyokugoyakuActivity.class);//朝食後薬
             startActivity(intent24);
         } else if (v.getId() == R.id.bt_click25) {
-            Intent intent25 = new Intent(this, TyusyokugoyakuActivity9_2.class);//昼食後薬
+            Intent intent25 = new Intent(this, TyusyokugoyakuActivity.class);//昼食後薬
             startActivity(intent25);
         } else if (v.getId() == R.id.bt_click26) {
-            Intent intent26 = new Intent(this, YusyokugoyakuActivity9_3.class);//夕食後薬
+            Intent intent26 = new Intent(this, YusyokugoyakuActivity.class);//夕食後薬
             startActivity(intent26);
         } else if (v.getId() == R.id.bt_click27) {
-            Intent intent27 = new Intent(this, KisyouziyakuActivity9_4.class);//起床時薬
+            Intent intent27 = new Intent(this, KisyouziyakuActivity.class);//起床時薬
             startActivity(intent27);
         } else if (v.getId() == R.id.bt_click28) {
-            Intent intent28 = new Intent(this, SyusinngoyakuActivity9_5.class);//就寝薬
+            Intent intent28 = new Intent(this, SyusinngoyakuActivity.class);//就寝薬
             startActivity(intent28);
         } else if (v.getId() == R.id.bt_click29) {
-            Intent intent29 = new Intent(this, TonpukuActivity9_6.class);//頓服
+            Intent intent29 = new Intent(this, TonpukuActivity.class);//頓服
             startActivity(intent29);
         }
     }
