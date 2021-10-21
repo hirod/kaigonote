@@ -29,6 +29,7 @@
     <string name="kisyouziyaku_click">起床時薬</string>
     <string name="syusinngoyaku_click">就寝薬</string>
     <string name="tonpuku_click">頓服</string>
+    <string name="syokuzennyaku_click">食前薬</string>
     <string name="menu_1">排尿メニュー</string>
     <string-array name="kaigo">
         　　

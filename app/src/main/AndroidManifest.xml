@@ -38,6 +38,7 @@
         <activity android:name=".SyokujiActivity" />
         <activity android:name=".HainyouActivity" />
         <activity android:name=".HaisetuActivity" />
+        <activity android:name=".SyokuzennyakuActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

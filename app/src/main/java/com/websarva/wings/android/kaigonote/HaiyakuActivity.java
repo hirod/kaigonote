@@ -25,6 +25,7 @@ public class HaiyakuActivity extends AppCompatActivity implements OnClickListene
         binding.kisyouziyakuClick.setOnClickListener(this);//起床時薬ボタンがタップされたときの処理
         binding.syusinngoyakuClick.setOnClickListener(this);//就寝薬ボタンがタップされたときの処理
         binding.tonpukuClick.setOnClickListener(this);//頓服ボタンがタップされたときの処理
+        binding.syokuzennyakuClick.setOnClickListener(this);//食前薬ボタンがタップされたときの処理
     }
 
     public void onClick(View v) {
@@ -46,6 +47,10 @@ public class HaiyakuActivity extends AppCompatActivity implements OnClickListene
         } else if (v.getId() == R.id.tonpuku_click) {
             Intent intent29 = new Intent(this, TonpukuActivity.class);//頓服
             startActivity(intent29);
+        } else if (v.getId() == R.id.syokuzennyaku_click) {
+            Intent intent30 = new Intent(this, SyokuzennyakuActivity.class);
+            startActivity(intent30);
         }
+
     }
 }

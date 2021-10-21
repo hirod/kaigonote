@@ -12,10 +12,12 @@
         android:layout_height="100dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="148dp"
         android:text="@string/tyosyokugoyaku_click"
+        app:layout_constraintBottom_toTopOf="@+id/kisyouziyaku_click"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.509" />
 
     <Button
         android:id="@+id/tyusyokugoyaku_click"
@@ -27,6 +29,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:text="@string/tyusyokugoyaku_click"
+        app:layout_constraintBottom_toTopOf="@+id/syusinngoyaku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,10 +38,11 @@
         android:id="@+id/yusyokugoyaku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="@string/yusyokugoyaku_click"
+        app:layout_constraintBottom_toTopOf="@+id/tonpuku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,4 +81,15 @@
         android:text="@string/tonpuku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/syokuzennyaku_click"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/syokuzennyaku_click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kisyouziyaku_click" />
 </androidx.constraintlayout.widget.ConstraintLayout>
