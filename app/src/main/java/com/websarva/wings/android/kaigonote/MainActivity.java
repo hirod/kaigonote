@@ -1,13 +1,22 @@
 package com.websarva.wings.android.kaigonote;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.websarva.wings.android.kaigonote.data.KaigoDB;
+import com.websarva.wings.android.kaigonote.data.KaigoDao;
+import com.websarva.wings.android.kaigonote.data.KaigoDatabase;
+import com.websarva.wings.android.kaigonote.data.Resident;
 import com.websarva.wings.android.kaigonote.databinding.MenuBinding;
+
+import java.util.Date;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -31,6 +40,25 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         binding.haiyakuClick.setOnClickListener(this);//配薬ボタンがタップされたときの処理
         binding.kirokuitirannClick.setOnClickListener(this);//記録一覧ボタンがタップされたときの処理
 
+        AsyncTask<Void, Void, List<Resident>> task = new AsyncTask<Void, Void, List<Resident>>() {
+
+            @Override
+            protected List<Resident> doInBackground(Void... voids) {
+                KaigoDatabase db = KaigoDB.Companion.getInstance(getApplication());
+                KaigoDao dao = db.dao();
+                dao.insert(new Resident(0, "Kaigo", new Date()));
+                List<Resident> results = dao.getAll();
+                return results;
+            }
+
+            @Override
+            protected void onPostExecute(List<Resident> results) {
+                for (Resident resident : results) {
+                    Log.d("Resident", "UID=" + resident.getUid());
+                }
+            }
+        };
+        task.execute();
     }
 
     @Override
