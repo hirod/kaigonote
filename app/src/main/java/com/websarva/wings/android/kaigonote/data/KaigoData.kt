@@ -8,7 +8,7 @@ import java.util.*
 @Entity(tableName = "resident")
 data class Resident(
     @PrimaryKey(autoGenerate = true)
-    val uid: Int,
+    val uid: Long,
     @ColumnInfo(name = "name")
     val name: String?,
     @ColumnInfo(name = "date")
