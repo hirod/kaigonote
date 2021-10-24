@@ -5,15 +5,15 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.websarva.wings.android.kaigonote.databinding.SyokuzennyakuBinding;
+import com.websarva.wings.android.kaigonote.databinding.SyokuzennyakuyoruBinding;
 
-public class SyokuzennyakuActivity extends AppCompatActivity {
-    private SyokuzennyakuBinding binding;
+public class SyokuzennyakuyoruActivity extends AppCompatActivity {
+    private SyokuzennyakuyoruBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = SyokuzennyakuBinding.inflate(getLayoutInflater());
+        binding = SyokuzennyakuyoruBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
     }

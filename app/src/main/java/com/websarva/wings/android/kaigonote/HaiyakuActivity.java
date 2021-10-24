@@ -25,7 +25,9 @@ public class HaiyakuActivity extends AppCompatActivity implements OnClickListene
         binding.kisyouziyakuClick.setOnClickListener(this);//起床時薬ボタンがタップされたときの処理
         binding.syusinngoyakuClick.setOnClickListener(this);//就寝薬ボタンがタップされたときの処理
         binding.tonpukuClick.setOnClickListener(this);//頓服ボタンがタップされたときの処理
-        binding.syokuzennyakuClick.setOnClickListener(this);//食前薬ボタンがタップされたときの処理
+        binding.syokuzennyakuasaClick.setOnClickListener(this);//朝食前薬ボタンがタップされたときの処理
+        binding.syokuzennyakuhiruClick.setOnClickListener(this);//昼食前薬ボタンがタップされたときの処理
+        binding.syokuzennyakuyoruClick.setOnClickListener(this);//夜食前薬ボタンがタップされたときの処理
     }
 
     public void onClick(View v) {
@@ -47,9 +49,15 @@ public class HaiyakuActivity extends AppCompatActivity implements OnClickListene
         } else if (v.getId() == R.id.tonpuku_click) {
             Intent intent29 = new Intent(this, TonpukuActivity.class);//頓服
             startActivity(intent29);
-        } else if (v.getId() == R.id.syokuzennyaku_click) {
-            Intent intent30 = new Intent(this, SyokuzennyakuActivity.class);
+        } else if (v.getId() == R.id.syokuzennyakuasa_click) {
+            Intent intent30 = new Intent(this, SyokuzennyakuasaActivity.class);//朝食前薬
             startActivity(intent30);
+        } else if (v.getId() == R.id.syokuzennyakuhiru_click) {
+            Intent intent31 = new Intent(this, SyokuzennyakuhiruActivity.class);//昼食前薬
+            startActivity(intent31);
+        } else if (v.getId() == R.id.syokuzennyakuyoru_click) {
+            Intent intent32 = new Intent(this, SyokuzennyakuyoruActivity.class);//夜食前薬
+            startActivity(intent32);
         }
 
     }

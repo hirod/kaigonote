@@ -14,35 +14,28 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="148dp"
         android:text="@string/tyosyokugoyaku_click"
-        app:layout_constraintBottom_toTopOf="@+id/kisyouziyaku_click"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tyusyokugoyaku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginTop="148dp"
         android:text="@string/tyusyokugoyaku_click"
-        app:layout_constraintBottom_toTopOf="@+id/syusinngoyaku_click"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/yusyokugoyaku_click"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@+id/tyosyokugoyaku_click"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/yusyokugoyaku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="148dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="@string/yusyokugoyaku_click"
-        app:layout_constraintBottom_toTopOf="@+id/tonpuku_click"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,46 +43,66 @@
         android:id="@+id/kisyouziyaku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="268dp"
-        android:layout_marginRight="268dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="44dp"
         android:text="@string/kisyouziyaku_click"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tyosyokugoyaku_click" />
 
     <Button
         android:id="@+id/syusinngoyaku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginTop="44dp"
         android:text="@string/syusinngoyaku_click"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tonpuku_click"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toEndOf="@+id/kisyouziyaku_click"
+        app:layout_constraintTop_toBottomOf="@+id/tyusyokugoyaku_click" />
 
     <Button
         android:id="@+id/tonpuku_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="352dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="@string/tonpuku_click"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/yusyokugoyaku_click" />
 
     <Button
-        android:id="@+id/syokuzennyaku_click"
+        android:id="@+id/syokuzennyakuasa_click"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="55dp"
-        android:text="@string/syokuzennyaku_click"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/syokuzennyakuasa_click"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kisyouziyaku_click" />
+
+    <Button
+        android:id="@+id/syokuzennyakuhiru_click"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/syokuzennyakuhiru_click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toEndOf="@+id/syokuzennyakuasa_click"
+        app:layout_constraintTop_toBottomOf="@+id/syusinngoyaku_click" />
+
+    <Button
+        android:id="@+id/syokuzennyakuyoru_click"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/syokuzennyakuyoru_click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tonpuku_click" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
