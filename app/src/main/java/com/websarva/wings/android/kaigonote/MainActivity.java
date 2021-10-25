@@ -9,10 +9,12 @@ import android.view.View.OnClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.websarva.wings.android.kaigonote.data.Kaigo;
 import com.websarva.wings.android.kaigonote.data.KaigoDB;
 import com.websarva.wings.android.kaigonote.data.KaigoDao;
 import com.websarva.wings.android.kaigonote.data.KaigoDatabase;
 import com.websarva.wings.android.kaigonote.data.Resident;
+import com.websarva.wings.android.kaigonote.data.ResidentDao;
 import com.websarva.wings.android.kaigonote.databinding.MenuBinding;
 
 import java.util.Date;
@@ -45,9 +47,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             @Override
             protected List<Resident> doInBackground(Void... voids) {
                 KaigoDatabase db = KaigoDB.Companion.getInstance(getApplication());
-                KaigoDao dao = db.dao();
+                ResidentDao dao = db.dao();
                 dao.insert(new Resident(0, "Kaigo", new Date()));
                 List<Resident> results = dao.getAll();
+                KaigoDao dao1 = db.kaigo();
+                dao1.insert(new Kaigo(new Date(), 101, 1, "排尿あり", "排便あり", "入浴されました", 10, 10, 200, 10, 10, 200, 10, 200, 200, 10, 200,
+                        "飲まれました 水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄",
+                        "口腔ケア行いました", "口腔ケア行いました", "口腔ケア行いました", "他の入居者様と楽しいそうに話されていました", "血圧 120/78 脈拍　85　spo2 98%", "", "", "", ""));//追加宿題
+                List<Kaigo> kaigoList = dao1.getKaigoAll();
+
                 return results;
             }
 

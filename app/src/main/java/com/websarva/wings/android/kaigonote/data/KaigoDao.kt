@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface KaigoDao {
+interface ResidentDao {
     @Query("SELECT * FROM resident")
     fun getAll(): List<Resident>
 
@@ -18,4 +18,16 @@ interface KaigoDao {
 
     @Delete
     fun delete(resident: Resident)
+}
+
+@Dao
+interface KaigoDao {
+    @Query("SELECT * FROM Kaigo")
+    fun getKaigoAll(): List<Kaigo>
+
+    @Insert
+    fun insert(kaigo: Kaigo)
+
+    @Delete
+    fun delete(kaigo: Kaigo)
 }
