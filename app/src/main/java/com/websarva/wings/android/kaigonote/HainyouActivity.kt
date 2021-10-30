@@ -1,16 +1,20 @@
 package com.websarva.wings.android.kaigonote
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.websarva.wings.android.kaigonote.HainyouActivity.ListItemClickListner
-import android.widget.EditText
-import com.websarva.wings.android.kaigonote.R
-import android.widget.AdapterView.OnItemClickListener
 import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import com.websarva.wings.android.kaigonote.data.Kaigo
+import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.databinding.HainyouBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class HainyouActivity : AppCompatActivity() {
     private var _kaigoId = -1
@@ -33,6 +37,18 @@ class HainyouActivity : AppCompatActivity() {
         stmo2.setText("")
         val tv_name1 = findViewById<Button>(R.id.tv_name1)
         tv_name1.isEnabled = false
+    }
+
+    private fun saveData(kaigo: Kaigo) {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val db = KaigoDB.getInstance(application)
+                val dao = db.kaigo()
+                dao.insert(kaigo)
+            }
+            //保存完了
+            finish()
+        }
     }
 
     private inner class ListItemClickListner : OnItemClickListener {
