@@ -51,9 +51,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 dao.insert(new Resident(0, "Kaigo", new Date()));
                 List<Resident> results = dao.getAll();
                 KaigoDao dao1 = db.kaigo();
-                dao1.insert(new Kaigo(new Date(), 101, 1, "排尿あり", "排便あり", "入浴されました", 10, 10, 200, 10, 10, 200, 10, 200, 200, 10, 200,
+                dao1.insert(new Kaigo(0, new Date(), 101, 1, "排尿あり", "排便あり", "入浴されました", 10, 10, 200, 10, 10, 200, 10, 200, 200, 10, 200,
                         "飲まれました 水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄",
                         "口腔ケア行いました", "口腔ケア行いました", "口腔ケア行いました", "他の入居者様と楽しいそうに話されていました", "血圧 120/78 脈拍　85　spo2 98%", "", "", "", ""));//追加宿題
+
+
                 List<Kaigo> kaigoList = dao1.getKaigoAll();
 
                 return results;

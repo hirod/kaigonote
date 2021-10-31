@@ -17,6 +17,8 @@ data class Resident(
 
 @Entity(tableName = "Kaigo")//追加
 data class Kaigo(
+        @PrimaryKey(autoGenerate = true)
+        val uid: Long,
         var hiduke: Date,
         var roomNumber: Int,
         var riyousyaID: Int,
