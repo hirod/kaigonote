@@ -17,7 +17,7 @@
 
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/hainyou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -28,7 +28,7 @@
         app2:layout_constraintTop_toBottomOf="@+id/kaigo" />
 
     <TextView
-        android:id="@+id/tv_name2"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -39,59 +39,59 @@
         app2:layout_constraintTop_toBottomOf="@+id/kaigo" />
 
     <TextView
-        android:id="@+id/tv_name3"
+        android:id="@+id/bikou_labelu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="140dp"
         android:text="@string/tv_name3"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/stmo" />
+        app2:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/stmo"
+        android:id="@+id/name_labelu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:minHeight="48dp"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="1.0"
+        app2:layout_constraintHorizontal_bias="0.0"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/tv_name2"
+        app2:layout_constraintTop_toBottomOf="@+id/name"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/stmo2"
+        android:id="@+id/bikou"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:minHeight="48dp"
         app2:layout_constraintEnd_toEndOf="parent"
-        app2:layout_constraintHorizontal_bias="1.0"
+        app2:layout_constraintHorizontal_bias="0.0"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/tv_name3"
+        app2:layout_constraintTop_toBottomOf="@+id/bikou_labelu"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/tv_name1"
+        android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="116dp"
         android:onClick="onSaveButtonClick"
         android:text="@string/tv_name1"
         app2:layout_constraintEnd_toEndOf="parent"
         app2:layout_constraintHorizontal_bias="0.498"
         app2:layout_constraintStart_toStartOf="parent"
-        app2:layout_constraintTop_toBottomOf="@+id/stmo2" />
+        app2:layout_constraintTop_toBottomOf="@+id/bikou" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

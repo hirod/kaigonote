@@ -5,8 +5,6 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.websarva.wings.android.kaigonote.data.Kaigo
@@ -15,6 +13,7 @@ import com.websarva.wings.android.kaigonote.databinding.HainyouBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.*
 
 class HainyouActivity : AppCompatActivity() {
     private var _kaigoId = -1
@@ -30,13 +29,15 @@ class HainyouActivity : AppCompatActivity() {
 
     fun onSaveButtonClick(view: View?) {
         //名前を習得。
-        val stmo = findViewById<EditText>(R.id.stmo)
-        stmo.setText("")
+        binding!!.nameLabelu.text
         //備考を習得。
-        val stmo2 = findViewById<EditText>(R.id.stmo2)
-        stmo2.setText("")
-        val tv_name1 = findViewById<Button>(R.id.tv_name1)
+        binding!!.bikou.text
+        val tv_name1 = findViewById<Button>(R.id.save)
         tv_name1.isEnabled = false
+        val kaigo = Kaigo(0, Date(), 101, 1, _kaigoName, "", "", 10, 10, 200, 10, 10, 200, 10, 200, 200, 10, 200,
+                "", "", "", "", "", "", "", "", "",
+                "", "", "", "", "", "", "", "", "")
+        saveData(kaigo)
     }
 
     private fun saveData(kaigo: Kaigo) {
@@ -55,10 +56,8 @@ class HainyouActivity : AppCompatActivity() {
         override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
             _kaigoId = position
             _kaigoName = parent.getItemAtPosition(position) as String
-            val tv_name = findViewById<TextView>(R.id.tv_name)
-            tv_name.text = _kaigoName
-            val tv_name1 = findViewById<Button>(R.id.tv_name1)
-            tv_name1.isEnabled = true
+            binding!!.hainyou.text = _kaigoName
+            binding!!.save.isEnabled = true
         }
     }
 }
