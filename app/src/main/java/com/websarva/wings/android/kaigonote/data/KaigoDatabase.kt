@@ -38,3 +38,19 @@ class KaigoDB {
         }
     }
 }
+
+class hainyouDB {
+    companion object {
+        private const val DB_FILE = "hainyou.db"
+        private val db: hainyouDatabase? = null
+        fun getInstance(application: Application): hainyouDatabase {
+            if (db == null) {
+                db = Room.databaseBuilder(
+                        application,
+                        hainyouDatabase::class.java, DB_FILE.build()
+            }
+            return db!!
+        }
+    }
+}
+
