@@ -1,20 +1,16 @@
-package com.websarva.wings.android.kaigonote;
+package com.websarva.wings.android.kaigonote
 
-import android.os.Bundle;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import com.websarva.wings.android.kaigonote.databinding.SyotiBinding
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.websarva.wings.android.kaigonote.databinding.SyotiBinding;
-
-public class SyotiActivity extends AppCompatActivity {
-    private SyotiBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = SyotiBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+class SyotiActivity : AppCompatActivity() {
+    private var binding: SyotiBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = SyotiBinding.inflate(layoutInflater)
+        val view: View = binding!!.root
+        setContentView(view)
     }
 }

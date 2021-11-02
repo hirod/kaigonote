@@ -1,21 +1,16 @@
-package com.websarva.wings.android.kaigonote;
+package com.websarva.wings.android.kaigonote
 
-import android.os.Bundle;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import com.websarva.wings.android.kaigonote.databinding.TyosyokugoyakuBinding
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.websarva.wings.android.kaigonote.databinding.TyosyokugoyakuBinding;
-
-
-public class TyosyokugoyakuActivity extends AppCompatActivity {
-    private TyosyokugoyakuBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = TyosyokugoyakuBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+class TyosyokugoyakuActivity : AppCompatActivity() {
+    private var binding: TyosyokugoyakuBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = TyosyokugoyakuBinding.inflate(layoutInflater)
+        val view: View = binding!!.root
+        setContentView(view)
     }
 }

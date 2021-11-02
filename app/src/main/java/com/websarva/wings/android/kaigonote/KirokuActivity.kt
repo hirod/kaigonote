@@ -1,39 +1,37 @@
-package com.websarva.wings.android.kaigonote;
+package com.websarva.wings.android.kaigonote
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.websarva.wings.android.kaigonote.R
+import android.content.Intent
+import android.view.View
+import com.websarva.wings.android.kaigonote.NitizyoukirokuActivity
+import com.websarva.wings.android.kaigonote.NyuyokukirokuActivity
+import com.websarva.wings.android.kaigonote.MosiokuriActivity
+import com.websarva.wings.android.kaigonote.databinding.KirokuBinding
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.websarva.wings.android.kaigonote.databinding.KirokuBinding;
-
-public class KirokuActivity extends AppCompatActivity implements OnClickListener {
-    private KirokuBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = KirokuBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
-        binding.nitizyoukirokuClick.setOnClickListener(this);//日常記録ボタンがタップされたときの処理
-        binding.nyuyokukirokuClick.setOnClickListener(this);//入浴記録ボタンがタップされたときの処理
-        binding.mosiokuriClick.setOnClickListener(this);//申し送りボタンがタップされたときの処理
-
+class KirokuActivity : AppCompatActivity(), View.OnClickListener {
+    private var binding: KirokuBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = KirokuBinding.inflate(layoutInflater)
+        val view: View = binding!!.root
+        setContentView(view)
+        binding!!.nitizyoukirokuClick.setOnClickListener(this) //日常記録ボタンがタップされたときの処理
+        binding!!.nyuyokukirokuClick.setOnClickListener(this) //入浴記録ボタンがタップされたときの処理
+        binding!!.mosiokuriClick.setOnClickListener(this) //申し送りボタンがタップされたときの処理
     }
 
-    public void onClick(View v) {
-        if (v.getId() == R.id.nitizyoukiroku_click) {
-            Intent intent19 = new Intent(this, NitizyoukirokuActivity.class);//日常記録
-            startActivity(intent19);
-        } else if (v.getId() == R.id.nyuyokukiroku_click) {
-            Intent intent20 = new Intent(this, NyuyokukirokuActivity.class);//入浴記録
-            startActivity(intent20);
-        } else if (v.getId() == R.id.mosiokuri_click) {
-            Intent intent21 = new Intent(this, MosiokuriActivity.class);//申し送り
-            startActivity(intent21);
+    override fun onClick(v: View) {
+        if (v.id == R.id.nitizyoukiroku_click) {
+            val intent19 = Intent(this, NitizyoukirokuActivity::class.java) //日常記録
+            startActivity(intent19)
+        } else if (v.id == R.id.nyuyokukiroku_click) {
+            val intent20 = Intent(this, NyuyokukirokuActivity::class.java) //入浴記録
+            startActivity(intent20)
+        } else if (v.id == R.id.mosiokuri_click) {
+            val intent21 = Intent(this, MosiokuriActivity::class.java) //申し送り
+            startActivity(intent21)
         }
     }
 }

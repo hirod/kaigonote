@@ -1,20 +1,16 @@
-package com.websarva.wings.android.kaigonote;
+package com.websarva.wings.android.kaigonote
 
-import android.os.Bundle;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import com.websarva.wings.android.kaigonote.databinding.HiyariBinding
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.websarva.wings.android.kaigonote.databinding.HiyariBinding;
-
-public class HiyariActivity extends AppCompatActivity {
-    private HiyariBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = HiyariBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+class HiyariActivity : AppCompatActivity() {
+    private var binding: HiyariBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = HiyariBinding.inflate(layoutInflater)
+        val view: View = binding!!.root
+        setContentView(view)
     }
 }

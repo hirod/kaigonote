@@ -1,35 +1,32 @@
-package com.websarva.wings.android.kaigonote;
+package com.websarva.wings.android.kaigonote
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.websarva.wings.android.kaigonote.R
+import android.content.Intent
+import android.view.View
+import com.websarva.wings.android.kaigonote.HainyouActivity
+import com.websarva.wings.android.kaigonote.HaibennActivity
+import com.websarva.wings.android.kaigonote.databinding.HaisetuBinding
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.websarva.wings.android.kaigonote.databinding.HaisetuBinding;
-
-public class HaisetuActivity extends AppCompatActivity implements View.OnClickListener {
-    private HaisetuBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = HaisetuBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);//画面切り替え
-        binding.hainyouClick.setOnClickListener(this);//排尿ボタンがタップされたときの処理
-        binding.haibennClick.setOnClickListener(this);//排便ボタンがタップされたときの処理
+class HaisetuActivity : AppCompatActivity(), View.OnClickListener {
+    private var binding: HaisetuBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = HaisetuBinding.inflate(layoutInflater)
+        val view: View = binding!!.root
+        setContentView(view) //画面切り替え
+        binding!!.hainyouClick.setOnClickListener(this) //排尿ボタンがタップされたときの処理
+        binding!!.haibennClick.setOnClickListener(this) //排便ボタンがタップされたときの処理
     }
 
-    public void onClick(View v) {
-        if (v.getId() == R.id.hainyou_click) {
-            Intent intent10 = new Intent(this, HainyouActivity.class);//排尿メニュー
-            startActivity(intent10);
-        } else if (v.getId() == R.id.haibenn_click) {
-            Intent intent11 = new Intent(this, HaibennActivity.class);//排便メニュー
-            startActivity(intent11);
+    override fun onClick(v: View) {
+        if (v.id == R.id.hainyou_click) {
+            val intent10 = Intent(this, HainyouActivity::class.java) //排尿メニュー
+            startActivity(intent10)
+        } else if (v.id == R.id.haibenn_click) {
+            val intent11 = Intent(this, HaibennActivity::class.java) //排便メニュー
+            startActivity(intent11)
         }
     }
 }
-
-

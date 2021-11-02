@@ -39,7 +39,7 @@ class KaigoDB {
     }
 }
 
-class hainyouDB {
+/*class hainyouDB {
     companion object {
         private const val DB_FILE = "hainyou.db"
         private val db: hainyouDatabase? = null
@@ -52,5 +52,4 @@ class hainyouDB {
             return db!!
         }
     }
-}
-
+*/
