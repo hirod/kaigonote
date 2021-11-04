@@ -22,6 +22,7 @@ class DateConverter {
 abstract class KaigoDatabase : RoomDatabase() {
     abstract fun dao(): ResidentDao
     abstract fun kaigo(): KaigoDao
+    abstract fun hainyou(): hainyouDao
 }
 
 class KaigoDB {
@@ -39,17 +40,17 @@ class KaigoDB {
     }
 }
 
-/*class hainyouDB {
+class hainyouDB {
     companion object {
         private const val DB_FILE = "hainyou.db"
-        private val db: hainyouDatabase? = null
-        fun getInstance(application: Application): hainyouDatabase {
+        private val db: KaigoDatabase? = null
+        fun getInstance(application: Application): KaigoDatabase {
             if (db == null) {
                 db = Room.databaseBuilder(
                         application,
-                        hainyouDatabase::class.java, DB_FILE.build()
+                        KaigoDatabase::class.java, DB_FILE.build()
             }
             return db!!
         }
     }
-*/
+}

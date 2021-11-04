@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 
+
 @Entity(tableName = "resident")
 data class Resident(
         @PrimaryKey(autoGenerate = true)
@@ -56,7 +57,7 @@ data class Kaigo(
         var kirokuitirann: String,
 )
 
-@Entity(tableName = "hainyou")
+/*@Entity(tableName = "hainyou")
 data class hainyou(
         @PrimaryKey(autoGenerate = true)
         var uid: Long,
@@ -76,5 +77,5 @@ data class haiben(
         var haiben: String,
         var bikou: String,
 
-        )
+        )*/
 

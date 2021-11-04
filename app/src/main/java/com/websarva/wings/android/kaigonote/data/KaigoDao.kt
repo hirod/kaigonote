@@ -32,7 +32,7 @@ interface KaigoDao {
     fun delete(kaigo: Kaigo)
 }
 
-@Dao
+/*@Dao
 interface hainyouDao {
     @Query("SELECT * FROM hainyou")
     fun gethainyouAll(): List<hainyou>
@@ -42,4 +42,5 @@ interface hainyouDao {
 
     @Delete
     fun delete(hainyou: hainyou)
-}
+
+ */
