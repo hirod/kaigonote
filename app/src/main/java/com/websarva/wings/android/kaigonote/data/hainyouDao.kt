@@ -4,16 +4,15 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import java.util.*
 
 @Dao
-interface hainyouDao {
+interface HainyouDao {
     @Query("SELECT * FROM hainyou")
-    fun gethainyouAll(): List<hainyou>
+    fun gethainyouAll(): List<Hainyou>
 
     @Insert
-    fun insert(hainyou: hainyou)
+    fun insert(hainyou: Hainyou)
 
     @Delete
-    fun delete(hainyou: hainyou)
+    fun delete(hainyou: Hainyou)
 }

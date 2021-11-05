@@ -1,8 +1,12 @@
 package com.websarva.wings.android.kaigonote.data
 
 import android.app.Application
-import androidx.room.*
-import java.util.*
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverter
+import androidx.room.TypeConverters
+import java.util.Date
 
 class DateConverter {
     @TypeConverter
@@ -16,13 +20,13 @@ class DateConverter {
     }
 }
 
-@Database(entities = arrayOf(Resident::class, Kaigo::class), version = 1)
+@Database(entities = arrayOf(Resident::class, Kaigo::class, Hainyou::class), version = 1)
 
 @TypeConverters(DateConverter::class)
 abstract class KaigoDatabase : RoomDatabase() {
     abstract fun dao(): ResidentDao
     abstract fun kaigo(): KaigoDao
-    abstract fun hainyou(): hainyouDao
+    abstract fun hainyou(): HainyouDao
 }
 
 class KaigoDB {
@@ -32,23 +36,9 @@ class KaigoDB {
         fun getInstance(application: Application): KaigoDatabase {
             if (db == null) {
                 db = Room.databaseBuilder(
-                        application,
-                        KaigoDatabase::class.java, DB_FILE).build()
-            }
-            return db!!
-        }
-    }
-}
-
-class hainyouDB {
-    companion object {
-        private const val DB_FILE = "hainyou.db"
-        private val db: KaigoDatabase? = null
-        fun getInstance(application: Application): KaigoDatabase {
-            if (db == null) {
-                db = Room.databaseBuilder(
-                        application,
-                        KaigoDatabase::class.java, DB_FILE.build()
+                    application,
+                    KaigoDatabase::class.java, DB_FILE
+                ).build()
             }
             return db!!
         }
