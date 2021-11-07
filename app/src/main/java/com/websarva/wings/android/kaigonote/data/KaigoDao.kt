@@ -26,7 +26,7 @@ interface KaigoDao {
     fun getKaigoAll(): List<Kaigo>
 
     @Insert
-    fun insert(kaigo: Kaigo)
+    fun insert(kaigo: Hainyou)
 
     @Delete
     fun delete(kaigo: Kaigo)

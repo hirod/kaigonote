@@ -1,24 +1,13 @@
 package com.websarva.wings.android.kaigonote;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.websarva.wings.android.kaigonote.data.Kaigo;
-import com.websarva.wings.android.kaigonote.data.KaigoDB;
-import com.websarva.wings.android.kaigonote.data.KaigoDao;
-import com.websarva.wings.android.kaigonote.data.KaigoDatabase;
-import com.websarva.wings.android.kaigonote.data.Resident;
-import com.websarva.wings.android.kaigonote.data.ResidentDao;
 import com.websarva.wings.android.kaigonote.databinding.MenuBinding;
-
-import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -41,32 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         binding.syotiClick.setOnClickListener(this);//処置ボタンがタップされたときの処理
         binding.haiyakuClick.setOnClickListener(this);//配薬ボタンがタップされたときの処理
         binding.kirokuitirannClick.setOnClickListener(this);//記録一覧ボタンがタップされたときの処理
-
-        AsyncTask<Void, Void, List<Resident>> task = new AsyncTask<Void, Void, List<Resident>>() {
-
-            @Override
-            protected List<Resident> doInBackground(Void... voids) {
-                KaigoDatabase db = KaigoDB.Companion.getInstance(getApplication());
-                ResidentDao dao = db.dao();
-                dao.insert(new Resident(0, "Kaigo", new Date()));
-                List<Resident> results = dao.getAll();
-                KaigoDao dao1 = db.kaigo();
-                dao1.insert(new Kaigo(0, new Date(), 101, 1, "排尿あり", "排便あり", "入浴されました", 10, 10, 200, 10, 10, 200, 10, 200, 200, 10, 200,
-                        "飲まれました 水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄", "飲まれました　水50㏄",
-                        "口腔ケア行いました", "口腔ケア行いました", "口腔ケア行いました", "他の入居者様と楽しいそうに話されていました", "血圧 120/78 脈拍　85　spo2 98%", "", "", "", ""));//追加宿題
-                List<Kaigo> kaigoList = dao1.getKaigoAll();
-
-                return results;
-            }
-
-            @Override
-            protected void onPostExecute(List<Resident> results) {
-                for (Resident resident : results) {
-                    Log.d("Resident", "UID=" + resident.getUid());
-                }
-            }
-        };
-        task.execute();
+        
     }
 
     @Override

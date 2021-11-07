@@ -32,8 +32,9 @@ class KirokuitirannActivity : AppCompatActivity() {
                 if (cv == null) {
                     cv = layoutInflater.inflate(R.layout.item_log, parent, false)
                 }
-                val itemBinding = ItemLogBinding.bind(cv!!)
+                val itemBinding = ItemLogBinding.bind(cv!!)//画面表示する
                 itemBinding.date.text = data.hiduke.toString()
+                itemBinding.date.text = data.name.toString()
                 return cv
             }
         }

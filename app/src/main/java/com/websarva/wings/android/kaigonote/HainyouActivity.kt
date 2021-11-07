@@ -7,7 +7,7 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.websarva.wings.android.kaigonote.data.Kaigo
+import com.websarva.wings.android.kaigonote.data.Hainyou
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.databinding.HainyouBinding
 import kotlinx.coroutines.Dispatchers
@@ -34,18 +34,16 @@ class HainyouActivity : AppCompatActivity() {
         binding!!.bikou.text
         val tv_name1 = findViewById<Button>(R.id.save)
         tv_name1.isEnabled = false
-        val kaigo = Kaigo(0, Date(), 101, 1, _kaigoName, "", "", 10, 10, 200, 10, 10, 200, 10, 200, 200, 10, 200,
-                "", "", "", "", "", "", "", "", "",
-                "", "", "", "", "", "", "", "", "")
-        saveData(kaigo)
+        val hainyou = Hainyou(0, Date(), binding!!.nameLabelu.text.toString(), "", binding!!.bikou.text.toString())
+        saveData(hainyou)
     }
 
-    private fun saveData(kaigo: Kaigo) {
+    private fun saveData(hainyou: Hainyou) {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
                 val db = KaigoDB.getInstance(application)
-                val dao = db.kaigo()
-                dao.insert(kaigo)
+                val dao = db.hainyou()
+                dao.insert(hainyou)
             }
             //保存完了
             finish()
