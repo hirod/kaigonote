@@ -34,7 +34,8 @@ class KirokuitirannActivity : AppCompatActivity() {
                 }
                 val itemBinding = ItemLogBinding.bind(cv!!)//画面表示する
                 itemBinding.date.text = data.hiduke.toString()
-                itemBinding.date.text = data.name.toString()
+                itemBinding.name.text = data.name
+                itemBinding.haisetu.text = data.hainyou
                 return cv
             }
         }

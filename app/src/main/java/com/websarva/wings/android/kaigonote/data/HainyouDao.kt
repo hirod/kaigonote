@@ -10,6 +10,10 @@ interface HainyouDao {
     @Query("SELECT * FROM hainyou")
     fun gethainyouAll(): List<Hainyou>
 
+    @Query("SELECT * FROM hainyou WHERE name = :name")
+    fun gethainyouByname(name: String): List<Hainyou>
+
+
     @Insert
     fun insert(hainyou: Hainyou)
 

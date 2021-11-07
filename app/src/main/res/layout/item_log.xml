@@ -29,4 +29,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bikou" />
 
+    <TextView
+        android:id="@+id/haisetu"
+        android:layout_width="107dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bikou" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
