@@ -3,8 +3,7 @@ package com.websarva.wings.android.kaigonote.data
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
-
+import java.util.Date
 
 @Entity(tableName = "resident")
 data class Resident(
@@ -56,26 +55,3 @@ data class Kaigo(
         var zikohoukokusyo: String,
         var kirokuitirann: String,
 )
-
-/*@Entity(tableName = "hainyou")
-data class hainyou(
-        @PrimaryKey(autoGenerate = true)
-        var uid: Long,
-        var hiduke: Date,
-        var name: String,
-        var hainyou: String,
-        var bikou: String,
-
-        )
-
-@Entity(tableName = "haiben")
-data class haiben(
-        @PrimaryKey(autoGenerate = true)
-        var uid: Long,
-        var hiduke: Date,
-        var name: String,
-        var haiben: String,
-        var bikou: String,
-
-        )*/
-

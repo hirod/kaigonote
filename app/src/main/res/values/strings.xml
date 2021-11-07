@@ -45,5 +45,7 @@
     <string name="tv_name3">備考</string>
     <string name="tv_name">未選択</string>
 
+    <string name="bt_back">前の10件</string>
+    <string name="bt_next">次の10件</string>
 
 </resources>
