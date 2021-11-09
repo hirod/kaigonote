@@ -33,13 +33,19 @@
     <string name="syokuzennyakuhiru_click">昼食前薬</string>
     <string name="syokuzennyakuyoru_click">夜食前薬</string>
     <string name="menu_1">排尿メニュー</string>
-    <string-array name="kaigo">
-        　　
+    <string-array name="kaigo">　　
         <item>排尿なし  </item>
         <item>排尿あり　少量</item>
         <item>排尿あり　普通量</item>
         <item>排尿あり　多量</item>
     </string-array>
+    <string-array name="haiben">
+        <item>排便なし</item>
+        <item>排便あり　少量</item>
+        <item>排便あり　普通量</item>
+        <item>排便あり　多量</item>
+    </string-array>
+
     <string name="tv_name1">保存</string>
     <string name="tv_name2">名前</string>
     <string name="tv_name3">備考</string>
@@ -47,5 +53,7 @@
 
     <string name="bt_back">前の10件</string>
     <string name="bt_next">次の10件</string>
+    <string name="bt_back2">前の100件</string>
+    <string name="bt_next2">次の100件</string>
 
 </resources>
