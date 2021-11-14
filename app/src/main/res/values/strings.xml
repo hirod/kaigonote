@@ -57,4 +57,6 @@
     <string name="bt_next2">次の100件</string>
 
     <string name="bt_debug">デバッグ</string>
+    <string name="bt_clear_hainyou">排尿を削除</string>
+    <string name="bt_add_hainyou">排尿を100件追加</string>
 </resources>
