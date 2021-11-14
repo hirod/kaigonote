@@ -12,7 +12,7 @@ import com.websarva.wings.android.kaigonote.databinding.HaibennBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.util.Date
+import java.util.*
 
 class HaibennActivity : AppCompatActivity() {
     private var _haibennId = -1
@@ -23,7 +23,7 @@ class HaibennActivity : AppCompatActivity() {
         binding = HaibennBinding.inflate(layoutInflater)
         val view: View = binding!!.root
         setContentView(view)
-        binding!!.haibenn.onItemClickListener = ListItemClickListner()
+        binding!!.haiben.onItemClickListener = ListItemClickListner()
     }
 
     fun onSaveButtonClick(view: View) {
