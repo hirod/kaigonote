@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import java.util.*
+import java.util.Date
 
 @Dao
 interface HainyouDao {
@@ -25,4 +25,7 @@ interface HainyouDao {
 
     @Delete
     fun delete(hainyou: Hainyou)
+
+    @Query("DELETE FROM hainyou")
+    fun deleteAll()
 }
