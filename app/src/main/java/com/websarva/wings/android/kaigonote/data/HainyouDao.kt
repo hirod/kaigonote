@@ -8,17 +8,17 @@ import java.util.*
 
 @Dao
 interface HainyouDao {
-    @Query("SELECT * FROM hainyou LIMIT 100 OFFSET 0")
-    fun gethainyouAll(): List<Hainyou>
+    @Query("SELECT * FROM hainyou LIMIT 100 OFFSET :offset")
+    fun gethainyouAll(offset: Long): List<Hainyou>
 
-    @Query("SELECT * FROM hainyou WHERE hiduke =:hiduke LIMIT 100 OFFSET 0 ")
-    fun gethainyouByhiduke(hiduke: Date): List<Hainyou>
+    @Query("SELECT * FROM hainyou WHERE hiduke =:hiduke LIMIT 100 OFFSET :offset ")
+    fun gethainyouByhiduke(hiduke: Date, offset: Long): List<Hainyou>
 
-    @Query("SELECT * FROM hainyou WHERE name = :name LIMIT 100 OFFSET 0;")
-    fun gethainyouByname(name: String): List<Hainyou>
+    @Query("SELECT * FROM hainyou WHERE name = :name LIMIT 100 OFFSET :offset;")
+    fun gethainyouByname(name: String, offset: Long): List<Hainyou>
 
-    @Query("SELECT * FROM hainyou WHERE hainyou= :hainyou LIMIT 100 OFFSET 0;")
-    fun gethainyouByhainyou(hainyou: String): List<Hainyou>
+    @Query("SELECT * FROM hainyou WHERE hainyou= :hainyou LIMIT 100 OFFSET :offset;")
+    fun gethainyouByhainyou(hainyou: String, offset: Long): List<Hainyou>//開始地点
 
     @Insert
     fun insert(hainyou: Hainyou)

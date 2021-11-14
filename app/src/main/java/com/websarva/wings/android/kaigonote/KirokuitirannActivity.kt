@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.websarva.wings.android.kaigonote.data.Haiben
 import com.websarva.wings.android.kaigonote.data.Hainyou
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.databinding.ItemLogBinding
@@ -18,6 +19,7 @@ class KirokuitirannActivity : AppCompatActivity() {
 
     private var binding: KirokuitirannBinding? = null
     private lateinit var adapter: ArrayAdapter<Hainyou>
+    private lateinit var adapter2: ArrayAdapter<Haiben>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,7 @@ class KirokuitirannActivity : AppCompatActivity() {
                 var cv = convertView
                 if (cv == null) {
                     cv = layoutInflater.inflate(R.layout.item_log, parent, false)
+
                 }
                 val itemBinding = ItemLogBinding.bind(cv!!)//画面表示する
                 itemBinding.date.text = data.hiduke.toString()
@@ -38,6 +41,7 @@ class KirokuitirannActivity : AppCompatActivity() {
                 itemBinding.haisetu.text = data.hainyou
                 return cv
             }
+
         }
         binding!!.list.adapter = adapter
 
@@ -51,7 +55,7 @@ class KirokuitirannActivity : AppCompatActivity() {
             val list = withContext(Dispatchers.IO) {
                 val db = KaigoDB.getInstance(application)
                 val dao = db.hainyou()
-                dao.gethainyouAll()
+                dao.gethainyouAll(0)
             }
             adapter.clear()
             adapter.addAll(list)
@@ -59,3 +63,4 @@ class KirokuitirannActivity : AppCompatActivity() {
         }
     }
 }
+
