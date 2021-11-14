@@ -20,6 +20,7 @@ class KirokuitirannActivity : AppCompatActivity() {
     private var binding: KirokuitirannBinding? = null
     private lateinit var adapter: ArrayAdapter<Hainyou>
     private lateinit var adapter2: ArrayAdapter<Haiben>
+    private var page: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,18 +45,22 @@ class KirokuitirannActivity : AppCompatActivity() {
 
         }
         binding!!.list.adapter = adapter
+        binding!!.next.setOnClickListener {
+            loadLog((page * 100).toLong())
+            page++
+        }
 
         //読み込み
-        loadLog()
+        loadLog(0)
     }
 
-    private fun loadLog() {
+    private fun loadLog(offset: Long) {
         lifecycleScope.launch {
             // データベースから読み込み
             val list = withContext(Dispatchers.IO) {
                 val db = KaigoDB.getInstance(application)
                 val dao = db.hainyou()
-                dao.gethainyouAll(0)
+                dao.gethainyouAll(offset)
             }
             adapter.clear()
             adapter.addAll(list)
