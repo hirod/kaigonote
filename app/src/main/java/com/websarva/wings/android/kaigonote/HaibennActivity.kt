@@ -12,8 +12,7 @@ import com.websarva.wings.android.kaigonote.databinding.HaibennBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.util.*
-
+import java.util.Date
 
 class HaibennActivity : AppCompatActivity() {
     private var _haibennId = -1
@@ -51,7 +50,7 @@ class HaibennActivity : AppCompatActivity() {
         override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
             _haibennId = position
             _haibennName = parent.getItemAtPosition(position) as String
-            binding!!.haibenn.text = _haibennName
+            binding!!.selectedHaibenn.text = _haibennName
             binding!!.save.isEnabled = true
         }
     }

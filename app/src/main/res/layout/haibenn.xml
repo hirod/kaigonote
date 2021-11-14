@@ -25,12 +25,12 @@
         android:layout_marginTop="16dp"
         android:text="@string/tv_name2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+        app:layout_constraintTop_toBottomOf="@+id/selected_haibenn" />
 
     <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="48dp"
-        android:layout_height="24dp"
+        android:id="@+id/selected_haibenn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
