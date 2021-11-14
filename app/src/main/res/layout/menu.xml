@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/haisetu_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="16dp"
@@ -21,8 +21,8 @@
 
     <Button
         android:id="@+id/syokujinsui_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
@@ -32,8 +32,8 @@
 
     <Button
         android:id="@+id/kouku_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
@@ -43,8 +43,8 @@
 
     <Button
         android:id="@+id/kiroku_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
@@ -56,8 +56,8 @@
 
     <Button
         android:id="@+id/nyuyoku_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="24dp"
@@ -67,8 +67,8 @@
 
     <Button
         android:id="@+id/acsidento_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
@@ -78,8 +78,8 @@
 
     <Button
         android:id="@+id/syoti_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
@@ -89,8 +89,8 @@
 
     <Button
         android:id="@+id/haiyaku_click"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/menu_width"
+        android:layout_height="@dimen/menu_height"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
@@ -114,6 +114,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/bt_debug"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
