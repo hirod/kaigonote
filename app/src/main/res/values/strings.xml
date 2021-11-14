@@ -56,4 +56,5 @@
     <string name="bt_back2">前の100件</string>
     <string name="bt_next2">次の100件</string>
 
+    <string name="bt_debug">デバッグ</string>
 </resources>

@@ -1,19 +1,9 @@
 package com.websarva.wings.android.kaigonote
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.websarva.wings.android.kaigonote.R
 import android.content.Intent
+import android.os.Bundle
 import android.view.View
-import com.websarva.wings.android.kaigonote.HaisetuActivity
-import com.websarva.wings.android.kaigonote.SyokujiActivity
-import com.websarva.wings.android.kaigonote.KoukuActivity
-import com.websarva.wings.android.kaigonote.NyuyokuActivity
-import com.websarva.wings.android.kaigonote.KirokuActivity
-import com.websarva.wings.android.kaigonote.AcsidentoActivity
-import com.websarva.wings.android.kaigonote.SyotiActivity
-import com.websarva.wings.android.kaigonote.HaiyakuActivity
-import com.websarva.wings.android.kaigonote.KirokuitirannActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.websarva.wings.android.kaigonote.databinding.MenuBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -32,6 +22,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding!!.syotiClick.setOnClickListener(this) //処置ボタンがタップされたときの処理
         binding!!.haiyakuClick.setOnClickListener(this) //配薬ボタンがタップされたときの処理
         binding!!.kirokuitirannClick.setOnClickListener(this) //記録一覧ボタンがタップされたときの処理
+        binding!!.debug.setOnClickListener {
+            startActivity(Intent(this, DebugActivity::class.java))
+        }
     }
 
     override fun onClick(v: View) {

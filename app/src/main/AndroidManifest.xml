@@ -41,7 +41,6 @@
         <activity android:name=".SyokuzennyakuasaActivity" />
         <activity android:name=".SyokuzennyakuhiruActivity" />
         <activity android:name=".SyokuzennyakuyoruActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,6 +48,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DebugActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
