@@ -22,11 +22,13 @@ class KirokuitirannActivity : AppCompatActivity() {
     private lateinit var adapter2: ArrayAdapter<Haiben>
     private var page: Int = 0
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = KirokuitirannBinding.inflate(layoutInflater)
         val view: View = binding!!.root
         setContentView(view)
+
 
         adapter = object : ArrayAdapter<Hainyou>(this, R.layout.item_log) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -46,8 +48,14 @@ class KirokuitirannActivity : AppCompatActivity() {
         }
         binding!!.list.adapter = adapter
         binding!!.next.setOnClickListener {
-            loadLog((page * 100).toLong())
             page++
+            loadLog((page * 100).toLong())
+        }
+        binding!!.back.setOnClickListener {
+            if (page > 0) {
+                page--
+            }
+            loadLog((page * 100).toLong())
         }
 
         //読み込み
@@ -68,4 +76,3 @@ class KirokuitirannActivity : AppCompatActivity() {
         }
     }
 }
-
