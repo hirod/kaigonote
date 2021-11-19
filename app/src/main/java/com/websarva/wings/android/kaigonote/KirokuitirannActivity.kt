@@ -22,7 +22,6 @@ class KirokuitirannActivity : AppCompatActivity() {
     private lateinit var adapter2: ArrayAdapter<Haiben>
     private var page: Int = 0
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = KirokuitirannBinding.inflate(layoutInflater)
@@ -75,4 +74,5 @@ class KirokuitirannActivity : AppCompatActivity() {
             //画面に表示
         }
     }
+
 }

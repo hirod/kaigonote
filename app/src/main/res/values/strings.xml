@@ -60,8 +60,15 @@
     <string name="bt_clear_hainyou">排尿を削除</string>
     <string name="bt_add_hainyou">排尿を100件追加</string>
 
-    <string name="page_hainyou">排尿ページ</string>
-    <string name="page_haibenn">排便ページ</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="page_haisetu">排泄記録</string>
+    <string name="page_syokuji">食事記録</string>
+    <string name="page_kouku">口腔記録</string>
+    <string name="page_haiyaku">配薬記録</string>
+    <string name="page_nyuyokukiroku">入浴記録</string>
+    <string name="page_nitizyoukiroku">日常記録</string>
+    <string name="page_mousiokuri">申し送り</string>
+    <string name="page_hiyarihat">ヒヤリハット</string>
+    <string name="page_zikohoukoku">事故報告</string>
+    <string name="page_syoti">処置記録</string>
 
 </resources>
