@@ -70,5 +70,7 @@
     <string name="page_hiyarihat">ヒヤリハット</string>
     <string name="page_zikohoukoku">事故報告</string>
     <string name="page_syoti">処置記録</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

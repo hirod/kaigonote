@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [HainyouFragment.newInstance] factory method to
+ * Use the [NyuyokuFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HainyouFragment : Fragment() {
+class NyuyokuFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class HainyouFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hainyou, container, false)
+        return inflater.inflate(R.layout.fragment_nyuyoku, container, false)
     }
 
     companion object {
@@ -44,12 +44,12 @@ class HainyouFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment HainyouFragment.
+         * @return A new instance of fragment NyuyokuFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HainyouFragment().apply {
+            NyuyokuFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

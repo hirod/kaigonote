@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.websarva.wings.android.kaigonote.data.Haiben
+import com.google.android.material.tabs.TabLayoutMediator
 import com.websarva.wings.android.kaigonote.data.Hainyou
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.databinding.ItemLogBinding
@@ -17,17 +17,41 @@ import kotlinx.coroutines.withContext
 
 class KirokuitirannActivity : AppCompatActivity() {
 
+    private lateinit var binding2: ItemLogBinding
+    private lateinit var viewPagerAdapter: ViewPagerAdapter
+
+
     private var binding: KirokuitirannBinding? = null
     private lateinit var adapter: ArrayAdapter<Hainyou>
-    private lateinit var adapter2: ArrayAdapter<Haiben>
     private var page: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = KirokuitirannBinding.inflate(layoutInflater)
+        binding2 = ItemLogBinding.inflate(layoutInflater)
         val view: View = binding!!.root
+        val view2: View = binding2.root
         setContentView(view)
+        setContentView(view2)
 
+        viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
+
+        with(binding2) {
+            viewPager.adapter = viewPagerAdapter
+            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+                when (position) {
+                    0 -> tab.text = "排泄"
+                    1 -> tab.text = "食事"
+                    2 -> tab.text = "口腔"
+                    3 -> tab.text = "入浴"
+                    4 -> tab.text = "日常記録"
+                    5 -> tab.text = "申し送り"
+                    6 -> tab.text = "ヒヤリハット"
+                    7 -> tab.text = "事故報告"
+                    8 -> tab.text = "処置"
+                }
+            }.attach()
+        }
 
         adapter = object : ArrayAdapter<Hainyou>(this, R.layout.item_log) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
