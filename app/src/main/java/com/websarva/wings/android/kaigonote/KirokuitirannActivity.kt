@@ -17,28 +17,25 @@ import kotlinx.coroutines.withContext
 
 class KirokuitirannActivity : AppCompatActivity() {
 
-    private lateinit var binding2: ItemLogBinding
+
     private lateinit var viewPagerAdapter: ViewPagerAdapter
-
-
-    private var binding: KirokuitirannBinding? = null
+    private lateinit var binding: KirokuitirannBinding
     private lateinit var adapter: ArrayAdapter<Hainyou>
     private var page: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = KirokuitirannBinding.inflate(layoutInflater)
-        binding2 = ItemLogBinding.inflate(layoutInflater)
-        val view: View = binding!!.root
-        val view2: View = binding2.root
+
+        val view: View = binding.root
+
         setContentView(view)
-        setContentView(view2)
 
         viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
 
-        with(binding2) {
-            viewPager.adapter = viewPagerAdapter
-            TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+        with(binding) {
+            binding.viewPager.adapter = viewPagerAdapter
+            TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
                 when (position) {
                     0 -> tab.text = "排泄"
                     1 -> tab.text = "食事"
@@ -69,12 +66,12 @@ class KirokuitirannActivity : AppCompatActivity() {
             }
 
         }
-        binding!!.list.adapter = adapter
-        binding!!.next.setOnClickListener {
+        binding.list.adapter = adapter
+        binding.next.setOnClickListener {
             page++
             loadLog((page * 100).toLong())
         }
-        binding!!.back.setOnClickListener {
+        binding.back.setOnClickListener {
             if (page > 0) {
                 page--
             }
