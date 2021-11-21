@@ -2,7 +2,7 @@ package com.websarva.wings.android.kaigonote.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
+import java.util.Date
 
 @Entity(tableName = "haiben")
 data class Haiben(
@@ -12,6 +12,4 @@ data class Haiben(
         var name: String,
         var haiben: String,
         var bikou: String,
-
-
-        )
+) : BaseKaigoData()

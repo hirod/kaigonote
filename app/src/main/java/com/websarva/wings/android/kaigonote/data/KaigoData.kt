@@ -55,3 +55,5 @@ data class Kaigo(
         var zikohoukokusyo: String,
         var kirokuitirann: String,
 )
+
+abstract class BaseKaigoData
