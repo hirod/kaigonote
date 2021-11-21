@@ -70,7 +70,7 @@ class HaisetuFragment : Fragment() {
             adapter.addAll(list)
             //画面に表示
         }
-        
+        //追加
     }
 }
 
