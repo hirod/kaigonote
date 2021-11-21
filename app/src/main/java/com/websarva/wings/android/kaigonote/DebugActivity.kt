@@ -6,6 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.lifecycle.lifecycleScope
+import com.websarva.wings.android.kaigonote.data.Haiben
 import com.websarva.wings.android.kaigonote.data.Hainyou
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.databinding.ActivityDebugBinding
@@ -25,20 +26,35 @@ class DebugActivity : AppCompatActivity() {
         setContentView(binding!!.root)
 
         binding!!.clearHainyou.setOnClickListener {
-            clearHainyou()
+            clearDb()
         }
 
         binding!!.addHainyou.setOnClickListener {
             addHainyou()
         }
+        binding!!.addHaibenn.setOnClickListener {
+            addHaibenn()
+        }
         setPagerAdapter()
     }
 
-    private fun clearHainyou() {
+    private fun clearDb() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val dao = KaigoDB.getInstance(application).hainyou()
-                dao.deleteAll()
+                val db = KaigoDB.getInstance(application)
+                db.hainyou().deleteAll()
+                db.haiben().deleteAll()
+            }
+        }
+    }
+
+    private fun addHaibenn() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val dao = KaigoDB.getInstance(application).haiben()
+                for (i in 0 until 100) {
+                    dao.insert(Haiben(0, Date(), "${i}さんの排便", "あり", "$i"))
+                }
             }
         }
     }
@@ -48,7 +64,7 @@ class DebugActivity : AppCompatActivity() {
             withContext(Dispatchers.IO) {
                 val dao = KaigoDB.getInstance(application).hainyou()
                 for (i in 0 until 100) {
-                    dao.insert(Hainyou(0, Date(), "${i}さん", "あり", "$i"))
+                    dao.insert(Hainyou(0, Date(), "${i}さんの排尿", "あり", "$i"))
                 }
             }
         }
