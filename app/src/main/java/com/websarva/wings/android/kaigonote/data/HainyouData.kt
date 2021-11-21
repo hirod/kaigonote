@@ -12,5 +12,5 @@ data class Hainyou(
         var name: String,
         var hainyou: String,
         var bikou: String,
-)
+) : BaseKaigoData()
 
