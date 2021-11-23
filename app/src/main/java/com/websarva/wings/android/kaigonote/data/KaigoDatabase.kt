@@ -12,15 +12,40 @@ class DateConverter {
 
     @TypeConverter
     fun dateToTimestamp(date: Date?): Long? {
-        return date?.time?.toLong()
+        return date?.time
     }
 }
 
-@Database(entities = arrayOf(Resident::class, Kaigo::class, Hainyou::class, Haiben::class, Tyousyoku::class,
-        Tyuusyoku::class, Yuusyoku::class, Kannsyoku::class, Tyousyokugoyaku::class, Tyuusyokugoyaku::class,
-        Yuusyokugoyaku::class, Syuusinyaku::class, Tonpuku::class, Tyousyokuzenyaku::class,
-        Tyuusyokuzenyaku::class, Yuusyokuzenyaku::class, Koukuasa::class, Koukuhiru::class, Koukuyoru::class, Hiyarihat::class,
-        Mousiokuri::class, Nitizyoukiroku::class, Nyuuyoku::class, Nyuuyokukiroku::class, Riyousya::class, Zikohoukokusyo::class), version = 1)
+@Database(
+    entities = arrayOf(
+        Resident::class,
+        Kaigo::class,
+        Hainyou::class,
+        Haiben::class,
+        Tyousyoku::class,
+        Tyuusyoku::class,
+        Yuusyoku::class,
+        Kannsyoku::class,
+        Tyousyokugoyaku::class,
+        Tyuusyokugoyaku::class,
+        Yuusyokugoyaku::class,
+        Syuusinyaku::class,
+        Tonpuku::class,
+        Tyousyokuzenyaku::class,
+        Tyuusyokuzenyaku::class,
+        Yuusyokuzenyaku::class,
+        Koukuasa::class,
+        Koukuhiru::class,
+        Koukuyoru::class,
+        Hiyarihat::class,
+        Mousiokuri::class,
+        Nitizyoukiroku::class,
+        Nyuuyoku::class,
+        Nyuuyokukiroku::class,
+        Riyousya::class,
+        Zikohoukokusyo::class
+    ), version = 1
+)
 
 @TypeConverters(DateConverter::class)
 abstract class KaigoDatabase : RoomDatabase() {
@@ -61,8 +86,8 @@ class KaigoDB {
         fun getInstance(application: Application): KaigoDatabase {
             if (db == null) {
                 db = Room.databaseBuilder(
-                        application,
-                        KaigoDatabase::class.java, DB_FILE
+                    application,
+                    KaigoDatabase::class.java, DB_FILE
                 ).build()
             }
             return db!!

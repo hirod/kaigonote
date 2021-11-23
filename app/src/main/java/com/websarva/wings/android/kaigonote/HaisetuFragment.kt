@@ -8,69 +8,96 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.websarva.wings.android.kaigonote.data.BaseKaigoData
+import com.websarva.wings.android.kaigonote.data.Haiben
 import com.websarva.wings.android.kaigonote.data.Hainyou
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.databinding.FragmentHaisetuBinding
+import com.websarva.wings.android.kaigonote.databinding.ItemHaisetuBinding
 import com.websarva.wings.android.kaigonote.databinding.ItemLogBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.text.DateFormat
 
 class HaisetuFragment : Fragment() {
 
-    private lateinit var binding: FragmentHaisetuBinding
-    private lateinit var adapter: ArrayAdapter<Hainyou>
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
+    companion object {
+        const val TITLE = "title"
     }
 
+    private lateinit var binding: FragmentHaisetuBinding
+    private lateinit var adapter: ArrayAdapter<BaseKaigoData>
+    private lateinit var dateFormat: DateFormat
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHaisetuBinding.inflate(inflater)
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = object : ArrayAdapter<Hainyou>(requireContext(), R.layout.item_log) {
+        val title = arguments?.getString(TITLE) ?: "title"
+        binding.title.text = title
+        dateFormat = DateFormat.getDateTimeInstance()
+
+        adapter = object : ArrayAdapter<BaseKaigoData>(requireContext(), R.layout.item_log) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-                val data = getItem(position)!!
                 var cv = convertView
                 if (cv == null) {
                     cv = layoutInflater.inflate(R.layout.item_log, parent, false)
-
                 }
-                val itemBinding = ItemLogBinding.bind(cv!!)//画面表示する
-                itemBinding.date.text = data.hiduke.toString()
-                itemBinding.name.text = data.name
-                itemBinding.haisetu.text = data.hainyou
-                return cv
+                when (title) {
+                    "排尿" -> {
+                        val data = getItem(position)!! as Hainyou
+                        val itemBinding = ItemLogBinding.bind(cv!!)//画面表示する
+                        itemBinding.date.text = dateFormat.format(data.hiduke)
+                        itemBinding.name.text = data.name
+                        itemBinding.haisetu.text = data.hainyou
+                    }
+                    "排便" -> {
+                        val data = getItem(position)!! as Haiben
+                        val itemBinding = ItemHaisetuBinding.bind(cv!!)
+                        itemBinding.date.text = dateFormat.format(data.hiduke)
+                        itemBinding.name.text = data.name
+                    }
+                }
+                return cv!!
             }
         }
-        binding.list.adapter = adapter
-        loadLog(0)
+        binding.listView.adapter = adapter
+        loadKaigoLog(title)
     }
 
-    private fun loadLog(offset: Long) {
+    private fun loadKaigoLog(type: String) {
         lifecycleScope.launch {
             // データベースから読み込み
-            val list = withContext(Dispatchers.IO) {
-                val db = KaigoDB.getInstance(requireContext().applicationContext as Application)
-                val dao = db.hainyou()
-                dao.gethainyouAll(offset)
+            val application = requireContext().applicationContext as Application
+            val db = KaigoDB.getInstance(application)
+            when (type) {
+                "排尿" -> {
+                    val dao = db.hainyou()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.gethainyouAll(0)
+                    }
+                    adapter.addAll(list)
+                }
+                "排便" -> {
+                    val dao = db.haiben()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.gethaibenAll()
+                    }
+                    adapter.addAll(list)
+                }
             }
-            adapter.clear()
-            adapter.addAll(list)
-            //画面に表示
         }
-        //追加
     }
 }
 

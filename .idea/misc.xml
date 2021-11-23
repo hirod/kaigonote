@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/acsidento.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_debug.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_haisetu.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_main.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_main10.xml" value="0.1513157894736842" />
@@ -32,9 +33,10 @@
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_main95.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_main96.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/asakouku.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_debug_tab.xml" value="0.1" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_haibenn.xml" value="0.1" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_hainyou.xml" value="0.22" />
-        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_haisetu.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_haisetu.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_kouku.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_nitizyoukiroku.xml" value="0.10460526315789474" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_syokuji.xml" value="0.10460526315789474" />

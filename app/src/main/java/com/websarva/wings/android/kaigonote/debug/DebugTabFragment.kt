@@ -30,7 +30,11 @@ class DebugTabFragment : Fragment() {
     private var adapter: ArrayAdapter<BaseKaigoData>? = null
     private lateinit var dateFormat: DateFormat
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentDebugTabBinding.inflate(inflater)
         return binding!!.root
     }

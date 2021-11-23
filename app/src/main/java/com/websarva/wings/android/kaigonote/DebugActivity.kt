@@ -14,7 +14,7 @@ import com.websarva.wings.android.kaigonote.debug.DebugTabFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.util.Date
+import java.util.*
 
 class DebugActivity : AppCompatActivity() {
 
@@ -53,7 +53,7 @@ class DebugActivity : AppCompatActivity() {
             withContext(Dispatchers.IO) {
                 val dao = KaigoDB.getInstance(application).haiben()
                 for (i in 0 until 100) {
-                    dao.insert(Haiben(0, Date(), "${i}さんの排便", "あり", "$i"))
+                    dao.insert(Haiben(0, Date(), "", "あり", ""))
                 }
             }
         }
@@ -64,7 +64,7 @@ class DebugActivity : AppCompatActivity() {
             withContext(Dispatchers.IO) {
                 val dao = KaigoDB.getInstance(application).hainyou()
                 for (i in 0 until 100) {
-                    dao.insert(Hainyou(0, Date(), "${i}さんの排尿", "あり", "$i"))
+                    dao.insert(Hainyou(0, Date(), "", "あり", ""))
                 }
             }
         }
@@ -72,7 +72,7 @@ class DebugActivity : AppCompatActivity() {
 
     private fun setPagerAdapter() {
         binding!!.viewPager.adapter = object : FragmentPagerAdapter(supportFragmentManager) {
-            private val titles = arrayOf("排尿", "排便")
+            private val titles = arrayOf("排尿", "排便", "食事", "口腔", "入浴", "日常記録")
             override fun getCount(): Int {
                 // タブ数
                 return titles.size
@@ -99,7 +99,7 @@ class DebugActivity : AppCompatActivity() {
             fun getItem_simple(position: Int): Fragment {
                 // Fragmentにデータを渡す
                 val bundle = bundleOf(
-                        DebugTabFragment.TITLE to "$position"
+                    DebugTabFragment.TITLE to "$position"
                 )
 
                 return DebugTabFragment().apply {
