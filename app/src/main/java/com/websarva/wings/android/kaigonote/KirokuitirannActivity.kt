@@ -71,7 +71,7 @@ class KirokuitirannActivity : AppCompatActivity() {
 
     private fun setPagerAdapter() {
         binding.viewPager.adapter = object : FragmentPagerAdapter(supportFragmentManager) {
-            private val titles = arrayOf("排尿", "排便")
+            private val titles = arrayOf("排尿", "排便", "食事", "服薬", "入浴", "")
             override fun getCount(): Int {
                 //タブ数
                 return titles.size

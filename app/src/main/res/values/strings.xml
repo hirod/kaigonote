@@ -39,6 +39,7 @@
         <item>排尿あり　普通量</item>
         <item>排尿あり　多量</item>
     </string-array>
+
     <string-array name="haiben">
         <item>排便なし</item>
         <item>排便あり　少量</item>
@@ -46,10 +47,24 @@
         <item>排便あり　多量</item>
     </string-array>
 
+    <string-array name="tyousyoku">
+        <item>朝食　主食　全量召し上がる</item>
+        <item>朝食　主食　半分召し上がる</item>
+        <item>朝食　主食　半分以下召し上がる</item>
+        <item>朝食　主食　食べなかった</item>
+        <item>朝食　副食　全量召し上がる</item>
+        <item>朝食　副食　半分召し上がる</item>
+        <item>朝食　副食　半分以下召し上がる</item>
+        <item>朝食　副食　食べなかった</item>
+    </string-array>
+
+    <string name="insui">飲水量</string>
+
     <string name="tv_name1">保存</string>
     <string name="tv_name2">名前</string>
     <string name="tv_name3">備考</string>
     <string name="tv_name">未選択</string>
+
 
     <string name="bt_back">前の100件</string>
     <string name="bt_next">次の100件</string>
