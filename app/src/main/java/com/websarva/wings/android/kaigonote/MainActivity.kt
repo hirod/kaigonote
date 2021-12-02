@@ -28,33 +28,43 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(v: View) {
-        if (v.id == R.id.haisetu_click) {
-            val intent = Intent(this, HaisetuActivity::class.java) //排泄メニュー
-            startActivity(intent)
-        } else if (v.id == R.id.syokujinsui_click) {
-            val intent2 = Intent(this, SyokujiActivity::class.java) //食事メニュー
-            startActivity(intent2)
-        } else if (v.id == R.id.kouku_click) {
-            val intent3 = Intent(this, KoukuActivity::class.java) //口腔メニュー
-            startActivity(intent3)
-        } else if (v.id == R.id.nyuyoku_click) {
-            val intent4 = Intent(this, NyuyokuActivity::class.java) //入浴メニュー
-            startActivity(intent4)
-        } else if (v.id == R.id.kiroku_click) {
-            val intent5 = Intent(this, KirokuActivity::class.java) //記録メニュー
-            startActivity(intent5)
-        } else if (v.id == R.id.acsidento_click) {
-            val intent6 = Intent(this, AcsidentoActivity::class.java) //アクシデントメニュー
-            startActivity(intent6)
-        } else if (v.id == R.id.syoti_click) {
-            val intent7 = Intent(this, SyotiActivity::class.java) //処置メニュー
-            startActivity(intent7)
-        } else if (v.id == R.id.haiyaku_click) {
-            val intent8 = Intent(this, HaiyakuActivity::class.java) //配薬メニュー
-            startActivity(intent8)
-        } else if (v.id == R.id.kirokuitirann_click) {
-            val intent9 = Intent(this, KirokuitirannActivity::class.java) //記録一覧メニュー
-            startActivity(intent9)
+        when (v.id) {
+            R.id.haisetu_click -> {
+                val intent = Intent(this, HaisetuActivity::class.java) //排泄メニュー
+                startActivity(intent)
+            }
+            R.id.syokujinsui_click -> {
+                val intent2 = Intent(this, SyokujiActivity::class.java) //食事メニュー
+                startActivity(intent2)
+            }
+            R.id.kouku_click -> {
+                val intent3 = Intent(this, KoukuActivity::class.java) //口腔メニュー
+                startActivity(intent3)
+            }
+            R.id.nyuyoku_click -> {
+                val intent4 = Intent(this, NyuyokuActivity::class.java) //入浴メニュー
+                startActivity(intent4)
+            }
+            R.id.kiroku_click -> {
+                val intent5 = Intent(this, KirokuActivity::class.java) //記録メニュー
+                startActivity(intent5)
+            }
+            R.id.acsidento_click -> {
+                val intent6 = Intent(this, AcsidentoActivity::class.java) //アクシデントメニュー
+                startActivity(intent6)
+            }
+            R.id.syoti_click -> {
+                val intent7 = Intent(this, SyotiActivity::class.java) //処置メニュー
+                startActivity(intent7)
+            }
+            R.id.haiyaku_click -> {
+                val intent8 = Intent(this, HaiyakuActivity::class.java) //配薬メニュー
+                startActivity(intent8)
+            }
+            R.id.kirokuitirann_click -> {
+                val intent9 = Intent(this, KirokumainActivity::class.java) //記録一覧メニュー
+                startActivity(intent9)
+            }
         }
     }
 }

@@ -9,6 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kaigonote">
+        <activity
+            android:name=".Fukuyaku_kirokuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Nyuyoku_kirokuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Nitizyou_kirokuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Kouku_kirokuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Syokuji_kirokuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Haisetu_kirokuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KirokumainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Kaigonote.NoActionBar" />
         <activity android:name=".TonpukuActivity" />
         <activity android:name=".SyusinngoyakuActivity" />
         <activity android:name=".KisyouziyakuActivity" />

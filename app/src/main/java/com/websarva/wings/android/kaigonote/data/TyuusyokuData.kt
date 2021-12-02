@@ -6,11 +6,10 @@ import java.util.*
 
 @Entity(tableName = "tyuusyoku")
 data class Tyuusyoku(
-        @PrimaryKey(autoGenerate = true)
-        var uid: Long,
-        var hiduke: Date,
-        var name: String,
-        var tyuusyokuSyusyoku: Int,
-        var tyuusyokuFukusyoku: Int,
-        var tyuusyokuInsui: Int
+    @PrimaryKey(autoGenerate = true)
+    var uid: Long,
+    var hiduke: Date,
+    var name: String,
+    var tyuusyoku: String,
+    var tyuusyokuInsui: String
 )

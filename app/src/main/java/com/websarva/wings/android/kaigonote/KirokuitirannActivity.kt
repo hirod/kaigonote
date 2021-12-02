@@ -16,7 +16,6 @@ import java.util.*
 
 class KirokuitirannActivity : AppCompatActivity() {
 
-
     private lateinit var binding: KirokuitirannBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +26,6 @@ class KirokuitirannActivity : AppCompatActivity() {
         binding.clearHainyou.setOnClickListener {
             clearDb()
         }
-
         binding.addHainyou.setOnClickListener {
             addHainyou()
         }
@@ -43,6 +41,7 @@ class KirokuitirannActivity : AppCompatActivity() {
                 val db = KaigoDB.getInstance(application)
                 db.hainyou().deleteAll()
                 db.haiben().deleteAll()
+                db.tyousyoku().deleteAll()
             }
         }
     }
@@ -53,6 +52,7 @@ class KirokuitirannActivity : AppCompatActivity() {
                 val dao = KaigoDB.getInstance(application).haiben()
                 for (i in 0 until 100) {
                     dao.insert(Haiben(0, Date(), "", "", ""))
+
                 }
             }
         }
@@ -69,9 +69,10 @@ class KirokuitirannActivity : AppCompatActivity() {
         }
     }
 
+
     private fun setPagerAdapter() {
         binding.viewPager.adapter = object : FragmentPagerAdapter(supportFragmentManager) {
-            private val titles = arrayOf("排尿", "排便", "食事", "服薬", "入浴", "")
+            private val titles = arrayOf("排尿", "排便", "食事", "服薬", "入浴", "日常記録", "申し送り", "事故報告")
             override fun getCount(): Int {
                 //タブ数
                 return titles.size
@@ -84,19 +85,18 @@ class KirokuitirannActivity : AppCompatActivity() {
 
             override fun getItem(position: Int): Fragment {
                 val title = titles[position]
-
                 //Fragmentにデータをわたす
                 val bundle = Bundle()
                 bundle.putString(HaisetuFragment.TITLE, title)
-
                 val fragment = HaisetuFragment()
                 fragment.arguments = bundle
-
                 return fragment
             }
+
         }
         binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 }
+
 
 

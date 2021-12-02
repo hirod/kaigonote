@@ -31,7 +31,11 @@ class HaibennActivity : AppCompatActivity() {
         binding!!.bikou.text
         val tv_name1 = findViewById<Button>(R.id.save)
         tv_name1.isEnabled = false
-        val haiben = Haiben(0, Date(), binding!!.nameLabelu.text.toString(), _haibennName, binding!!.bikou.text.toString())
+        val haiben = Haiben(
+            0, Date(),
+            binding!!.nameLabelu.text.toString(),
+            _haibennName, binding!!.bikou.text.toString()
+        )
         saveData(haiben)
     }
 

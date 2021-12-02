@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KirokumainActivity">
+
+    <Button
+        android:id="@+id/haisetu_kiroku"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/haisetu_kiroku"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/syokuzi_kiroku"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="@string/syokuji_kiroku"
+        app:layout_constraintEnd_toStartOf="@+id/kouku_kiroku"
+        app:layout_constraintStart_toEndOf="@+id/haisetu_kiroku"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fukuyaku_kiroku"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/haiyaku_kiroku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kouku_kiroku" />
+
+    <Button
+        android:id="@+id/nyuuyoku_kiroku"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="@string/nyuyoku_kiroku"
+        app:layout_constraintEnd_toStartOf="@+id/fukuyaku_kiroku"
+        app:layout_constraintStart_toEndOf="@+id/nitizyou_kiroku"
+        app:layout_constraintTop_toBottomOf="@+id/syokuzi_kiroku" />
+
+    <Button
+        android:id="@+id/nitizyou_kiroku"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/nitizyou_kiroku"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/haisetu_kiroku" />
+
+    <Button
+        android:id="@+id/kouku_kiroku"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/kouku_kiroku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

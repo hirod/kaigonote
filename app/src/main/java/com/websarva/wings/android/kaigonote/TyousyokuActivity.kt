@@ -2,7 +2,8 @@ package com.websarva.wings.android.kaigonote
 
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.websarva.wings.android.kaigonote.data.KaigoDB
@@ -13,7 +14,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.*
 
-class TyousyokuActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
+class TyousyokuActivity : AppCompatActivity() {
     private var _tyousyokuId = -1
     private var _tyousyokuName = ""
 
@@ -23,19 +24,6 @@ class TyousyokuActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         binding = TyousyokuBinding.inflate(layoutInflater)
         val view: View = binding!!.root
         setContentView(view)
-
-        //複数選択
-        val listView: ListView = findViewById(R.id.tyousyoku)
-        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_list_item_multiple_choice,
-            resources.getStringArray(R.array.tyousyoku)
-        )
-
-        listView.choiceMode = ListView.CHOICE_MODE_MULTIPLE
-        listView.adapter = arrayAdapter
-        listView.onItemClickListener = this
-
         binding!!.tyousyoku.onItemClickListener = ListItemClickListner()
     }
 
@@ -50,8 +38,7 @@ class TyousyokuActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
             0,
             Date(),
             binding!!.nameLabelu.text.toString(),
-            _tyousyokuName,
-            binding!!.insuiLabelu.text.toString()
+            _tyousyokuName, binding!!.insuiLabelu.text.toString()
         )
         saveData(tyousyoku)
     }
@@ -76,15 +63,5 @@ class TyousyokuActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
             binding!!.save.isEnabled = true
 
         }
-    }
-
-    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-
-        val items: String = parent?.getItemAtPosition(position) as String
-        Toast.makeText(
-            applicationContext,
-            "Clicked By : $items",
-            Toast.LENGTH_LONG
-        ).show()
     }
 }

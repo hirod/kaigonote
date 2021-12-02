@@ -89,4 +89,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    //ボタン名
+    <string name="haisetu_kiroku">排泄記録</string>
+    <string name="syokuji_kiroku">食事記録</string>
+    <string name="haiyaku_kiroku">服薬記録</string>
+    <string name="nyuyoku_kiroku">入浴記録</string>
+    <string name="kouku_kiroku">口腔記録</string>
+    <string name="nitizyou_kiroku">日常記録</string>
+    <string name="zikohoukoku_kiroku">事故報告</string>
+
 </resources>
