@@ -12,4 +12,4 @@ data class Kannsyoku(
     var name: String,
     var kannsyoku: String,
     var kannsyokuInsui: String,
-)
+) : BaseSyokujiData()

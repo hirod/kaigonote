@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.websarva.wings.android.kaigonote.data.BaseKaigoData
+import com.websarva.wings.android.kaigonote.data.BaseSyokujiData
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.data.Tyousyoku
 import com.websarva.wings.android.kaigonote.databinding.FragmentSyokujiBinding
@@ -25,7 +25,7 @@ class SyokujiFragment : Fragment() {
     }
 
     private lateinit var binding: FragmentSyokujiBinding
-    private lateinit var adapter: ArrayAdapter<BaseKaigoData>
+    private lateinit var adapter: ArrayAdapter<BaseSyokujiData>
     private lateinit var dateFormat: DateFormat
 
     override fun onCreateView(
@@ -43,7 +43,7 @@ class SyokujiFragment : Fragment() {
         binding.title.text = title
         dateFormat = DateFormat.getDateTimeInstance()
 
-        adapter = object : ArrayAdapter<BaseKaigoData>(requireContext(), R.layout.item_syokuji) {
+        adapter = object : ArrayAdapter<BaseSyokujiData>(requireContext(), R.layout.item_syokuji) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 var cv = convertView
                 if (cv == null) {

@@ -57,5 +57,6 @@ data class Kaigo(
 )
 
 abstract class BaseKaigoData
+abstract class BaseSyokujiData
 
 
