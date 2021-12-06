@@ -16,7 +16,10 @@ import java.util.*
 
 class TyousyokuActivity : AppCompatActivity() {
     private var _tyousyokuId = -1
+    private var _fukusyokuId = -1
     private var _tyousyokuName = ""
+    private var _fukusyokuName = ""
+
 
     private var binding: TyousyokuBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +27,12 @@ class TyousyokuActivity : AppCompatActivity() {
         binding = TyousyokuBinding.inflate(layoutInflater)
         val view: View = binding!!.root
         setContentView(view)
+
         binding!!.tyousyoku.onItemClickListener = ListItemClickListner()
+
+        binding!!.fukusyoku.onItemClickListener = ListClickListner()//副食リスト
     }
+
 
     fun onSaveButtonClick(view: View?) {
         //名前習得
@@ -38,7 +45,9 @@ class TyousyokuActivity : AppCompatActivity() {
             0,
             Date(),
             binding!!.nameLabelu.text.toString(),
-            _tyousyokuName, binding!!.insuiLabelu.text.toString()
+            _tyousyokuName,
+            _fukusyokuName,
+            binding!!.insuiLabelu.text.toString()
         )
         saveData(tyousyoku)
     }
@@ -60,8 +69,21 @@ class TyousyokuActivity : AppCompatActivity() {
             _tyousyokuId = position
             _tyousyokuName = parent.getItemAtPosition(position) as String
             binding!!.tvName.text = _tyousyokuName
+
             binding!!.save.isEnabled = true
 
         }
     }
+
+    private inner class ListClickListner : AdapterView.OnItemClickListener {
+        override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            _fukusyokuId = position
+            _fukusyokuName = parent?.getItemAtPosition(position) as String
+            binding!!.noSenntaku.text = _fukusyokuName
+            binding!!.save.isEnabled = true
+        }
+
+
+    }
 }
+   

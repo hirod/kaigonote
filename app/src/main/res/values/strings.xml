@@ -48,15 +48,21 @@
     </string-array>
 
     <string-array name="tyousyoku">
-        <item>朝食　主食　全量召し上がる</item>
-        <item>朝食　主食　半分召し上がる</item>
-        <item>朝食　主食　半分以下召し上がる</item>
-        <item>朝食　主食　食べなかった</item>
-        <item>朝食　副食　全量召し上がる</item>
-        <item>朝食　副食　半分召し上がる</item>
-        <item>朝食　副食　半分以下召し上がる</item>
-        <item>朝食　副食　食べなかった</item>
+        <item>　主食　全量召し上がる</item>
+        <item>　主食　半分召し上がる</item>
+        <item>　主食　半分以下召し上がる</item>
+        <item>　主食　食べなかった</item>
+
     </string-array>
+
+    <string-array name="fukusyoku">
+
+        <item>　副食　全量召し上がる</item>
+        <item>　副食　半分召し上がる</item>
+        <item>　副食　半分以下召し上がる</item>
+        <item>　副食　食べなかった</item>
+    </string-array>
+
 
     <string name="insui">飲水量</string>
 
@@ -64,6 +70,8 @@
     <string name="tv_name2">名前</string>
     <string name="tv_name3">備考</string>
     <string name="tv_name">未選択</string>
+
+    <string name="no_senntaku">未選択</string>
 
 
     <string name="bt_back">前の100件</string>

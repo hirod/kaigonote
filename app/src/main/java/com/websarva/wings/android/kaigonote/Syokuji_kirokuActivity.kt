@@ -44,7 +44,7 @@ class Syokuji_kirokuActivity : AppCompatActivity() {
             withContext(Dispatchers.IO) {
                 val dao = KaigoDB.getInstance(application).tyousyoku()
                 for (i in 0 until 100) {
-                    dao.insert(Tyousyoku(0, Date(), "", "", ""))
+                    dao.insert(Tyousyoku(0, Date(), "", "", "", ""))
                 }
             }
         }

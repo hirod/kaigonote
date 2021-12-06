@@ -29,13 +29,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
+
+    <TextView
+        android:id="@+id/fukusyoku"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tyousyoku" />
+
     <TextView
         android:id="@+id/tyousyokuinsui"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tyousyoku" />
+        app:layout_constraintTop_toBottomOf="@+id/fukusyoku" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

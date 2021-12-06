@@ -56,6 +56,7 @@ class SyokujiFragment : Fragment() {
                         itemSyokujiBinding.date.text = dateFormat.format(data.hiduke)
                         itemSyokujiBinding.name.text = data.name
                         itemSyokujiBinding.tyousyoku.text = data.tyousyoku
+                        itemSyokujiBinding.fukusyoku.text = data.fukusyoku
                         itemSyokujiBinding.tyousyokuinsui.text = data.tyousyokuInsui
                     }
                     //昼食

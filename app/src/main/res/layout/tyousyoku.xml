@@ -12,18 +12,39 @@
         android:layout_height="wrap_content"
         android:entries="@array/tyousyoku"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <ListView
+        android:id="@+id/fukusyoku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/fukusyoku"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tyousyoku" />
+
     <TextView
         android:id="@+id/tv_name"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_width="354dp"
+        android:layout_height="28dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/tv_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tyousyoku" />
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+    <TextView
+        android:id="@+id/no_senntaku"
+        android:layout_width="354dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/no_senntaku"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
     <TextView
         android:id="@+id/insui"
@@ -31,23 +52,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
         android:text="@string/insui"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/fukusyoku"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/insui_labelu"
-        android:layout_width="351dp"
-        android:layout_height="56dp"
+        android:layout_width="348dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/insui"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -65,8 +81,8 @@
 
     <EditText
         android:id="@+id/name_labelu"
-        android:layout_width="350dp"
-        android:layout_height="56dp"
+        android:layout_width="348dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
@@ -90,5 +106,6 @@
         android:text="@string/tv_name1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_labelu" />
+        app:layout_constraintTop_toBottomOf="@+id/name_labelu"
+        tools:ignore="OnClick" />
 </androidx.constraintlayout.widget.ConstraintLayout>
