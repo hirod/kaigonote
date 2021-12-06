@@ -41,7 +41,6 @@ class Haisetu_kirokuActivity : AppCompatActivity() {
                 val db = KaigoDB.getInstance(application)
                 db.hainyou().deleteAll()
                 db.haiben().deleteAll()
-                db.tyousyoku().deleteAll()
             }
         }
     }

@@ -11,5 +11,6 @@ data class Tyuusyoku(
     var hiduke: Date,
     var name: String,
     var tyuusyoku: String,
+    var fukusyoku: String,
     var tyuusyokuInsui: String
 ) : BaseSyokujiData()

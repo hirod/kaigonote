@@ -28,7 +28,7 @@ class TyousyokuActivity : AppCompatActivity() {
         val view: View = binding!!.root
         setContentView(view)
 
-        binding!!.tyousyoku.onItemClickListener = ListItemClickListner()
+        binding!!.syusyoku.onItemClickListener = ListItemClickListner()
 
         binding!!.fukusyoku.onItemClickListener = ListClickListner()//副食リスト
     }

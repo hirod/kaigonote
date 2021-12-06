@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.websarva.wings.android.kaigonote.data.BaseSyokujiData
 import com.websarva.wings.android.kaigonote.data.KaigoDB
 import com.websarva.wings.android.kaigonote.data.Tyousyoku
+import com.websarva.wings.android.kaigonote.data.Tyuusyoku
 import com.websarva.wings.android.kaigonote.databinding.FragmentSyokujiBinding
 import com.websarva.wings.android.kaigonote.databinding.ItemSyokujiBinding
 import kotlinx.coroutines.Dispatchers
@@ -55,11 +56,20 @@ class SyokujiFragment : Fragment() {
                         val itemSyokujiBinding = ItemSyokujiBinding.bind(cv!!)//画面表示する
                         itemSyokujiBinding.date.text = dateFormat.format(data.hiduke)
                         itemSyokujiBinding.name.text = data.name
-                        itemSyokujiBinding.tyousyoku.text = data.tyousyoku
+                        itemSyokujiBinding.syusyoku.text = data.tyousyoku
                         itemSyokujiBinding.fukusyoku.text = data.fukusyoku
-                        itemSyokujiBinding.tyousyokuinsui.text = data.tyousyokuInsui
+                        itemSyokujiBinding.suibunryou.text = data.tyousyokuInsui
                     }
                     //昼食
+                    "昼食" -> {
+                        val data = getItem(position)!! as Tyuusyoku
+                        val itemSyokujiBinding = ItemSyokujiBinding.bind(cv!!)//画面表示
+                        itemSyokujiBinding.date.text = dateFormat.format(data.hiduke)
+                        itemSyokujiBinding.name.text = data.name
+                        itemSyokujiBinding.syusyoku.text = data.tyuusyoku
+                        itemSyokujiBinding.fukusyoku.text = data.fukusyoku
+                        itemSyokujiBinding.suibunryou.text = data.tyuusyokuInsui
+                    }
                 }
                 return cv!!
             }
@@ -78,6 +88,14 @@ class SyokujiFragment : Fragment() {
                     adapter.clear()
                     val list = withContext(Dispatchers.IO) {
                         dao.gettyousyokuAll(0)
+                    }
+                    adapter.addAll(list)
+                }
+                "昼食" -> {
+                    val dao = db.tyuusyoku()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.gettyuusyokuAll(0)
                     }
                     adapter.addAll(list)
                 }

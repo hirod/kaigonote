@@ -47,7 +47,7 @@
         <item>排便あり　多量</item>
     </string-array>
 
-    <string-array name="tyousyoku">
+    <string-array name="syusyoku">
         <item>　主食　全量召し上がる</item>
         <item>　主食　半分召し上がる</item>
         <item>　主食　半分以下召し上がる</item>
