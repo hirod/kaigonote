@@ -36,6 +36,7 @@ class Syokuji_kirokuActivity : AppCompatActivity() {
                 val db = KaigoDB.getInstance(application)
                 db.tyousyoku().deleteAll()
                 db.tyuusyoku().deleteAll()
+                db.yuusyoku().deleteAll()
             }
         }
     }

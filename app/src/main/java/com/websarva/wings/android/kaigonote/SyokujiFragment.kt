@@ -8,10 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.websarva.wings.android.kaigonote.data.BaseSyokujiData
-import com.websarva.wings.android.kaigonote.data.KaigoDB
-import com.websarva.wings.android.kaigonote.data.Tyousyoku
-import com.websarva.wings.android.kaigonote.data.Tyuusyoku
+import com.websarva.wings.android.kaigonote.data.*
 import com.websarva.wings.android.kaigonote.databinding.FragmentSyokujiBinding
 import com.websarva.wings.android.kaigonote.databinding.ItemSyokujiBinding
 import kotlinx.coroutines.Dispatchers
@@ -70,6 +67,16 @@ class SyokujiFragment : Fragment() {
                         itemSyokujiBinding.fukusyoku.text = data.fukusyoku
                         itemSyokujiBinding.suibunryou.text = data.tyuusyokuInsui
                     }
+                    //夕食
+                    "夕食" -> {
+                        val data = getItem(position)!! as Yuusyoku
+                        val itemSyokujiBinding = ItemSyokujiBinding.bind(cv!!)//画面表示
+                        itemSyokujiBinding.date.text = dateFormat.format(data.hiduke)
+                        itemSyokujiBinding.name.text = data.name
+                        itemSyokujiBinding.syusyoku.text = data.yuusyoku
+                        itemSyokujiBinding.fukusyoku.text = data.fukusyoku
+                        itemSyokujiBinding.suibunryou.text = data.yuusyokuInsui
+                    }
                 }
                 return cv!!
             }
@@ -93,6 +100,14 @@ class SyokujiFragment : Fragment() {
                 }
                 "昼食" -> {
                     val dao = db.tyuusyoku()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.gettyuusyokuAll(0)
+                    }
+                    adapter.addAll(list)
+                }
+                "夕食" -> {
+                    val dao = db.yuusyoku()
                     adapter.clear()
                     val list = withContext(Dispatchers.IO) {
                         dao.gettyuusyokuAll(0)
