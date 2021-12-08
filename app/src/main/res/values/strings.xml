@@ -52,7 +52,6 @@
         <item>　主食　半分召し上がる</item>
         <item>　主食　半分以下召し上がる</item>
         <item>　主食　食べなかった</item>
-
     </string-array>
 
     <string-array name="fukusyoku">
@@ -63,6 +62,11 @@
         <item>　副食　食べなかった</item>
     </string-array>
 
+    <string-array name="kansyoku">
+        <item>間食　全量召し上がる</item>
+        <item>間食　半分召し上がる</item>
+        <item>間食　食べなかった</item>
+    </string-array>
 
     <string name="insui">飲水量</string>
 
