@@ -37,6 +37,7 @@ class Syokuji_kirokuActivity : AppCompatActivity() {
                 db.tyousyoku().deleteAll()
                 db.tyuusyoku().deleteAll()
                 db.yuusyoku().deleteAll()
+                db.kannsyoku().deleteAll()
             }
         }
     }

@@ -77,6 +77,15 @@ class SyokujiFragment : Fragment() {
                         itemSyokujiBinding.fukusyoku.text = data.fukusyoku
                         itemSyokujiBinding.suibunryou.text = data.yuusyokuInsui
                     }
+                    //間食
+                    "間食" -> {
+                        val data = getItem(position)!! as Kannsyoku
+                        val itemSyokujiBinding = ItemSyokujiBinding.bind(cv!!)//画面表示
+                        itemSyokujiBinding.date.text = dateFormat.format(data.hiduke)
+                        itemSyokujiBinding.name.text = data.name
+                        itemSyokujiBinding.syusyoku.text = data.kannsyoku
+                        itemSyokujiBinding.suibunryou.text = data.kannsyokuInsui
+                    }
                 }
                 return cv!!
             }
@@ -111,6 +120,14 @@ class SyokujiFragment : Fragment() {
                     adapter.clear()
                     val list = withContext(Dispatchers.IO) {
                         dao.gettyuusyokuAll(0)
+                    }
+                    adapter.addAll(list)
+                }
+                "間食" -> {
+                    val dao = db.kannsyoku()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.getkannsyokuAll(0)
                     }
                     adapter.addAll(list)
                 }
