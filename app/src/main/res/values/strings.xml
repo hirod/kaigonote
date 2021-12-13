@@ -68,6 +68,13 @@
         <item>間食　食べなかった</item>
     </string-array>
 
+    <string-array name="koukukea">
+        <item>自分で歯磨き行いました</item>
+        <item>口腔ケア行いました</item>
+        <item>口腔ケアできなかった</item>
+    </string-array>
+
+
     <string name="insui">飲水量</string>
 
     <string name="tv_name1">保存</string>

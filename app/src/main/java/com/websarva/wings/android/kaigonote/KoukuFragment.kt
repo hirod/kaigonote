@@ -1,59 +1,88 @@
 package com.websarva.wings.android.kaigonote
 
+import android.app.Application
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import com.websarva.wings.android.kaigonote.data.BaseKoukuData
+import com.websarva.wings.android.kaigonote.data.KaigoDB
+import com.websarva.wings.android.kaigonote.data.Koukuasa
+import com.websarva.wings.android.kaigonote.databinding.FragmentKoukuBinding
+import com.websarva.wings.android.kaigonote.databinding.ItemKoukuBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.text.DateFormat
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [KoukuFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class KoukuFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    companion object {
+        const val TITLE = "title"
     }
+
+    private lateinit var binding: FragmentKoukuBinding
+    private lateinit var adapter: ArrayAdapter<BaseKoukuData>
+    private lateinit var dateFormat: DateFormat
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_kouku, container, false)
+    ): View {
+        binding = FragmentKoukuBinding.inflate(inflater)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment KoukuFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            KoukuFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val title = arguments?.getString(TITLE) ?: "title"
+        binding.title.text = title
+        dateFormat = DateFormat.getDateTimeInstance()
+
+        adapter = object : ArrayAdapter<BaseKoukuData>(requireContext(), R.layout.item_kouku) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                var cv = convertView
+                if (cv == null) {
+                    cv = layoutInflater.inflate(R.layout.item_kouku, parent, false)
+                }
+                when (title) {
+                    "口腔朝" -> {
+                        val data = getItem(position)!! as Koukuasa
+                        val itemKoukuBinding = ItemKoukuBinding.bind(cv!!)
+                        itemKoukuBinding.date.text = dateFormat.format(data.hiduke)
+                        itemKoukuBinding.name.text = data.name
+                        itemKoukuBinding.kouku.text = data.koukuasa
+                        itemKoukuBinding.bikou.text = data.bikou
+                    }
+                }
+                return cv!!
+            }
+        }
+        binding.listView.adapter = adapter
+        loadKaigoLog(title)
+    }
+
+    private fun loadKaigoLog(type: String) {
+        lifecycleScope.launch {
+            val application = requireContext().applicationContext as Application
+            val db = KaigoDB.getInstance(application)
+            when (type) {
+                "口腔朝" -> {
+                    val dao = db.koukuasa()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.getkoukuasaAll(0)
+                    }
+                    adapter.addAll(list)
                 }
             }
+        }
     }
 }
+
+
+
