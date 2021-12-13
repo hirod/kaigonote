@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.websarva.wings.android.kaigonote.data.BaseKoukuData
-import com.websarva.wings.android.kaigonote.data.KaigoDB
-import com.websarva.wings.android.kaigonote.data.Koukuasa
+import com.websarva.wings.android.kaigonote.data.*
 import com.websarva.wings.android.kaigonote.databinding.FragmentKoukuBinding
 import com.websarva.wings.android.kaigonote.databinding.ItemKoukuBinding
 import kotlinx.coroutines.Dispatchers
@@ -58,6 +56,22 @@ class KoukuFragment : Fragment() {
                         itemKoukuBinding.kouku.text = data.koukuasa
                         itemKoukuBinding.bikou.text = data.bikou
                     }
+                    "口腔昼" -> {
+                        val data = getItem(position)!! as Koukuhiru
+                        val itemKoukuBinding = ItemKoukuBinding.bind(cv!!)
+                        itemKoukuBinding.date.text = dateFormat.format(data.hiduke)
+                        itemKoukuBinding.name.text = data.name
+                        itemKoukuBinding.kouku.text = data.koukuhiru
+                        itemKoukuBinding.bikou.text = data.bikou
+                    }
+                    "口腔夜" -> {
+                        val data = getItem(position)!! as Koukuyoru
+                        val itemKoukuBinding = ItemKoukuBinding.bind(cv!!)
+                        itemKoukuBinding.date.text = dateFormat.format(data.hiduke)
+                        itemKoukuBinding.name.text = data.name
+                        itemKoukuBinding.kouku.text = data.koukuyoru
+                        itemKoukuBinding.bikou.text = data.bikou
+                    }
                 }
                 return cv!!
             }
@@ -76,6 +90,22 @@ class KoukuFragment : Fragment() {
                     adapter.clear()
                     val list = withContext(Dispatchers.IO) {
                         dao.getkoukuasaAll(0)
+                    }
+                    adapter.addAll(list)
+                }
+                "口腔昼" -> {
+                    val dao = db.koukuhiru()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.getkoukuhiruAll(0)
+                    }
+                    adapter.addAll(list)
+                }
+                "口腔夜" -> {
+                    val dao = db.koukuyoru()
+                    adapter.clear()
+                    val list = withContext(Dispatchers.IO) {
+                        dao.getkoukuyoruAll(0)
                     }
                     adapter.addAll(list)
                 }

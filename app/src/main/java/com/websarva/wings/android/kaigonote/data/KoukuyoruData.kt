@@ -6,9 +6,10 @@ import java.util.*
 
 @Entity(tableName = "koukuyoru")
 data class Koukuyoru(
-        @PrimaryKey(autoGenerate = true)
-        var uid: Long,
-        var hiduke: Date,
-        var name: String,
-        var koukuyoru: String,
-)
+    @PrimaryKey(autoGenerate = true)
+    var uid: Long,
+    var hiduke: Date,
+    var name: String,
+    var koukuyoru: String,
+    var bikou: String
+) : BaseKoukuData()

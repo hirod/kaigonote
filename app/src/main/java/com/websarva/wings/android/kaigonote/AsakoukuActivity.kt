@@ -39,7 +39,6 @@ class AsakoukuActivity : AppCompatActivity() {
             _asakoukuName,
             binding!!.bikouLabelu.text.toString()
         )
-
         saveData(koukuasa)
     }
 

@@ -35,6 +35,8 @@ class Kouku_kirokuActivity : AppCompatActivity() {
             withContext(Dispatchers.IO) {
                 val db = KaigoDB.getInstance(application)
                 db.koukuasa().deleteAll()
+                db.koukuhiru().deleteAll()
+                db.koukuyoru().deleteAll()
             }
         }
     }
