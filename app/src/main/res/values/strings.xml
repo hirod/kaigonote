@@ -74,6 +74,11 @@
         <item>口腔ケアできなかった</item>
     </string-array>
 
+    <string-array name="fukuyaku">
+        <item>薬　飲まれました</item>
+        <item>中止する</item>
+
+    </string-array>
 
     <string name="insui">飲水量</string>
 
@@ -96,6 +101,7 @@
     <string name="bt_add_hainyou">排尿を100件追加</string>
     <string name="bt_add_haibenn">排便を100件追加</string>
     <string name="bt_add_syokuji">食事を100件追加</string>
+    <string name="bt_add_fukuyaku">服薬を100件追加</string>
 
 
     <string name="page_haisetu">排泄記録</string>

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/acsidento.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_debug.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_fukuyaku_kiroku.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_haisetu.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_haisetu_kiroku.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/activity_kirokumain.xml" value="0.22" />
@@ -43,16 +44,18 @@
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_haibenn.xml" value="0.1" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_hainyou.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_haisetu.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_haiyaku.xml" value="0.25" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_kouku.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_nitizyoukiroku.xml" value="0.10460526315789474" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/fragment_syokuji.xml" value="0.10460526315789474" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/haibenn.xml" value="0.22" />
-        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/hainyou.xml" value="0.1" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/hainyou.xml" value="0.25" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/haisetu.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/haiyaku.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/hirukouku.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/hiyari.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/item_haisetu.xml" value="0.11348684210526316" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/item_haiyaku.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/item_kouku.xml" value="0.11085526315789473" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/item_log.xml" value="0.1" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/item_syokuji.xml" value="0.13999999999999999" />
@@ -76,7 +79,7 @@
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/syusinngoyaku.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tonpuku.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tyosyoku.xml" value="0.1513157894736842" />
-        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tyosyokugoyaku.xml" value="0.1513157894736842" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tyosyokugoyaku.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tyousyoku.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tyusyoku.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/tyusyokugoyaku.xml" value="0.1513157894736842" />
@@ -85,6 +88,7 @@
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/yuusyoku.xml" value="0.22" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/layout/ziko.xml" value="0.1513157894736842" />
         <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11944444444444445" />
+        <entry key="..\:/Users/miket/AndroidStudioProjects/kaigonote/app/src/main/res/xml/item_haiyaku.xml" value="0.11085526315789473" />
       </map>
     </option>
   </component>
